@@ -1,0 +1,22 @@
+
+------------------------------------------
+Some infos for buiding the files:
+------------------------------------------
+
+BuildSamples.cmd
+ --> lets you build the MOGRE samples for any cpu
+ 
+BuildSamplesX86.cmd
+ --> lets you build the samples explicitly for 32-bit processors, 
+     so that WOW64 is activated on Windows 64-bit editions.
+
+BuildSamplesX64.cmd
+ --> ??
+
+
+The binaries are not in the sample subfolders.
+They are in MogreSDK/bin/Debug and MogreSDK/bin/Release.
+
+
+If you need help, ask in this forum thread:
+http://www.ogre3d.org/addonforums/viewtopic.php?f=8&t=11703
