@@ -82,7 +82,7 @@ namespace Mogre.Demo.BSP
 
             camera.Position = vp.Position;
             camera.Pitch(new Degree(90F));
-            camera.Rotate(vp.Orientation);
+            //camera.Rotate(vp.Orientation);
             camera.SetFixedYawAxis(true, Vector3.UNIT_Z);
         }
     }
