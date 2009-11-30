@@ -19,13 +19,13 @@ recompile it using the modified Ogre's include files.
 -------------------------------------
 Home page
 -------------------------------------
-http://mogre.sourceforge.net
+http://www.ogre3d.org/wiki/index.php/MOGRE
 
 
 -------------------------------------
 How to compile MOGRE
 -------------------------------------
-Visit http://ogre3d.org/wiki/index.php/Building_MOGRE_from_source
+Visit http://www.ogre3d.org/wiki/index.php/Building_MOGRE_1.6_from_source
 
 
 -------------------------------------
@@ -43,8 +43,10 @@ LGPL (see License.html)
 -------------------------------------
 Who is responsible
 -------------------------------------
-Copyright (c) 2006-2007 Argiris Kirtzidis
-Maintainer (2008): Mario Serrano Leones
+Copyright (c) 2006-2007 Argiris Kirtzidis (Bekas)
+Maintainer (2008): Mario Serrano Leones (Marioko)
+Maintainer (2009): GantZ
+Installer/SDK development (2009): kwertz
 
 
 -------------------------------------
