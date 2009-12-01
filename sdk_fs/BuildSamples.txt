@@ -10,6 +10,10 @@ BuildSamplesX86.cmd
  --> lets you build the samples explicitly for 32-bit processors, 
      so that WOW64 is activated on Windows 64-bit editions.
      Try this if you get a FileNotFoundException or a similar one.
+     
+CleanSamples.cmd
+ --> lets you clean the solution after building it with Microsoft
+     Visual Studio or one of the BuildSamples* scripts. 
 
 
 The binaries are not located in the sample subfolders.
