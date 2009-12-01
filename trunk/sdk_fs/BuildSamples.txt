@@ -9,11 +9,12 @@ BuildSamples.cmd
 BuildSamplesX86.cmd
  --> lets you build the samples explicitly for 32-bit processors, 
      so that WOW64 is activated on Windows 64-bit editions.
+     Try this if you get a FileNotFoundException or a similar one.
 
 
-The binaries are not in the sample subfolders.
+The binaries are not located in the sample subfolders.
 They are in MogreSDK/bin/Debug and MogreSDK/bin/Release.
 
 
-If you need help, ask in this forum thread:
+If you need help, please ask in this forum thread:
 http://www.ogre3d.org/addonforums/viewtopic.php?f=8&t=11703
