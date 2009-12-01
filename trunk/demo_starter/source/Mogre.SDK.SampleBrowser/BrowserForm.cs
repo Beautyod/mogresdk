@@ -1,3 +1,5 @@
+#define TEST_SERIALIZER
+
 using System;
 using System.Windows.Forms;
 using System.IO;
@@ -13,6 +15,32 @@ namespace Mogre.SDK.SampleBrowser
         {
             SetStyle( ControlStyles.DoubleBuffer, true );
             InitializeComponent();
+
+#if TEST_SERIALIZER
+            // Test code
+            var serializer = new ConfigurationSerializer();
+            serializer.Serialize("SampleBrowser.xml",
+                                 new[]
+                                     {
+                                         new ConfigurationSerializer.Sample
+                                             {
+                                                 Category = "SerializerTest",
+                                                 Description = "This is the description.",
+                                                 ExecutablePath = "test1.exe",
+                                                 PreviewImagePath = "image1.png",
+                                                 Name = "Test1"
+                                             }, new ConfigurationSerializer.Sample
+                                                    {
+                                                         Category = "SerializerTest",
+                                                         Description = "This is another description.",
+                                                         ExecutablePath = "test2.exe",
+                                                         PreviewImagePath = "image2.png",
+                                                         Name = "Test2"
+                                                    }
+                                     });
+
+            var samples = serializer.Deserialize("SampleBrowser.xml");
+#endif
         }
 
         protected void _buttonOk_Click( object sender, EventArgs e )
@@ -46,7 +74,7 @@ namespace Mogre.SDK.SampleBrowser
             set
             {
                 _previewImageStream = value ?? new FileStream("image_not_available.jpg", FileMode.Open);
-                _previewPictureBox.Image = System.Drawing.Image.FromStream(_previewImageStream);
+                _previewPictureBox.Image = Image.FromStream(_previewImageStream);
             }
         }
 
