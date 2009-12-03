@@ -44,7 +44,7 @@ namespace Mogre.SDK.SampleBrowser
             public Sample[] Samples { get; set; }
         }
 
-        public struct Sample
+        public class Sample
         {
             [XmlElement("name")]
             public string Name { get; set; }
@@ -60,6 +60,14 @@ namespace Mogre.SDK.SampleBrowser
 
             [XmlElement("previewImagePath")]
             public string PreviewImagePath { get; set; }
+
+            [XmlElement("tutorialLink")]
+            public string TutorialLink { get; set; }
+
+            public override string ToString()
+            {
+                return Name;
+            }
         }
     }
 }
