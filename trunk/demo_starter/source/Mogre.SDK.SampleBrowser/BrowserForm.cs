@@ -7,47 +7,25 @@ using System.Drawing;
 
 namespace Mogre.SDK.SampleBrowser
 {
+    // TODO: Category sorting could be useful
     public partial class BrowserForm : Form, IMessageFilter
     {
         private Stream _previewImageStream;
+        private readonly ConfigurationSerializer _serializer;
 
         public BrowserForm()
         {
             SetStyle( ControlStyles.DoubleBuffer, true );
             InitializeComponent();
 
-#if TEST_SERIALIZER
-            // Test code
-            var serializer = new ConfigurationSerializer();
-            serializer.Serialize("SampleBrowser.xml",
-                                 new[]
-                                     {
-                                         new ConfigurationSerializer.Sample
-                                             {
-                                                 Category = "SerializerTest",
-                                                 Description = "This is the description.",
-                                                 ExecutablePath = "test1.exe",
-                                                 PreviewImagePath = "image1.png",
-                                                 Name = "Test1"
-                                             }, new ConfigurationSerializer.Sample
-                                                    {
-                                                         Category = "SerializerTest",
-                                                         Description = "This is another description.",
-                                                         ExecutablePath = "test2.exe",
-                                                         PreviewImagePath = "image2.png",
-                                                         Name = "Test2"
-                                                    }
-                                     });
-
-            var samples = serializer.Deserialize("SampleBrowser.xml");
-#endif
+            _serializer = new ConfigurationSerializer();
         }
 
         protected void _buttonOk_Click( object sender, EventArgs e )
         {
-            // TODO: Run demo
-
-            Close();
+            if (_samplesListBox.SelectedItem != null)
+                if (new TasksForm((ConfigurationSerializer.Sample) _samplesListBox.SelectedItem).ShowDialog() == DialogResult.OK)
+                    Close();
         }
 
         protected void _buttonCancel_Click( object sender, EventArgs e )
@@ -62,7 +40,7 @@ namespace Mogre.SDK.SampleBrowser
             Application.AddMessageFilter(this);
 
             PreviewImageStream = null;
-            // TODO: Setup browser form
+            PopulateSampleList();
         }
 
         public Stream PreviewImageStream
@@ -73,8 +51,46 @@ namespace Mogre.SDK.SampleBrowser
             }
             set
             {
-                _previewImageStream = value ?? new FileStream("image_not_available.jpg", FileMode.Open);
-                _previewPictureBox.Image = Image.FromStream(_previewImageStream);
+                using (_previewImageStream = value ?? new FileStream("image_not_available.jpg", FileMode.Open))
+                {
+                    _previewPictureBox.Image = Image.FromStream(_previewImageStream);
+                }
+            }
+        }
+
+        public void PopulateSampleList()
+        {
+            _samplesListBox.Items.Clear();
+
+            try
+            {
+                _samplesListBox.Items.AddRange(_serializer.Deserialize("SampleBrowser.xml"));
+            }
+            catch (Exception)
+            {
+                MessageBox.Show(
+                    "An error occurred while reading the configuration file.\nPlease fix it before running this application again.",
+                    "Error", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+
+                Dispose();
+            }
+        }
+
+        private void _samplesListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var sample = _samplesListBox.SelectedItem as ConfigurationSerializer.Sample;
+            if (sample == null) return;
+
+            try
+            {
+                // Get preview image stream using the selected item
+                PreviewImageStream = new FileStream(sample.PreviewImagePath, FileMode.Open);
+            }
+            catch
+            {
+                // Reset preview image stream
+                PreviewImageStream = null;
             }
         }
 

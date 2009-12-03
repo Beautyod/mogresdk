@@ -32,6 +32,7 @@ namespace Mogre.SDK.SampleBrowser
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BrowserForm));
             this._logoPictureBox = new System.Windows.Forms.PictureBox();
             this._videoOptionsGroup = new System.Windows.Forms.GroupBox();
             this._previewPictureBox = new System.Windows.Forms.PictureBox();
@@ -84,6 +85,7 @@ namespace Mogre.SDK.SampleBrowser
             this._samplesListBox.Name = "_samplesListBox";
             this._samplesListBox.Size = new System.Drawing.Size(203, 124);
             this._samplesListBox.TabIndex = 0;
+            this._samplesListBox.SelectedIndexChanged += new System.EventHandler(this._samplesListBox_SelectedIndexChanged);
             // 
             // _cancelButton
             // 
@@ -128,6 +130,7 @@ namespace Mogre.SDK.SampleBrowser
             this.Controls.Add(this._backgroundPanel);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "BrowserForm";
