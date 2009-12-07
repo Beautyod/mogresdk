@@ -44,3 +44,8 @@ Name: {group}\Links\Project page at Sourceforge.net; Filename: http://sourceforg
 Name: {group}\Links\Browse the sources; Filename: http://mogre.svn.sourceforge.net/viewvc/mogre/
 
 Name: {group}\{cm:UninstallProgram,{#MyAppName}}; Filename: {uninstallexe}
+
+Name: {app}\Sample Browser; Filename: {app}\bin\Release\browser.exe; WorkingDir: {app}\bin\Release
+
+[Run]
+Filename: {win}\Microsoft.NET\Framework\v2.0.50727\ngen.exe; Parameters: "install ""{app}\bin\Release\browser.exe"""; WorkingDir: {app}; StatusMsg: Optimizing performance for your system ...; Flags: runhidden
