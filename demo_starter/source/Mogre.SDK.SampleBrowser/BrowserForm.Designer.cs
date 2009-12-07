@@ -33,27 +33,20 @@ namespace Mogre.SDK.SampleBrowser
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BrowserForm));
-            this._logoPictureBox = new System.Windows.Forms.PictureBox();
             this._videoOptionsGroup = new System.Windows.Forms.GroupBox();
             this._previewPictureBox = new System.Windows.Forms.PictureBox();
             this._samplesListBox = new System.Windows.Forms.ListBox();
             this._cancelButton = new System.Windows.Forms.Button();
             this._okButton = new System.Windows.Forms.Button();
             this._backgroundPanel = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this._logoPictureBox)).BeginInit();
+            this._loadSamplesWorker = new System.ComponentModel.BackgroundWorker();
+            this._progressIndicator = new System.Windows.Forms.PictureBox();
+            this._logoPictureBox = new System.Windows.Forms.PictureBox();
             this._videoOptionsGroup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._previewPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._progressIndicator)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._logoPictureBox)).BeginInit();
             this.SuspendLayout();
-            // 
-            // _logoPictureBox
-            // 
-            this._logoPictureBox.BackColor = System.Drawing.Color.White;
-            this._logoPictureBox.Image = global::Mogre.SDK.SampleBrowser.Properties.Resources.mogre_banner;
-            this._logoPictureBox.Location = new System.Drawing.Point(0, 3);
-            this._logoPictureBox.Name = "_logoPictureBox";
-            this._logoPictureBox.Size = new System.Drawing.Size(442, 174);
-            this._logoPictureBox.TabIndex = 3;
-            this._logoPictureBox.TabStop = false;
             // 
             // _videoOptionsGroup
             // 
@@ -97,19 +90,20 @@ namespace Mogre.SDK.SampleBrowser
             this._cancelButton.Size = new System.Drawing.Size(75, 23);
             this._cancelButton.TabIndex = 10;
             this._cancelButton.Text = "Cancel";
-            this._cancelButton.Click += new System.EventHandler(this._buttonCancel_Click);
+            this._cancelButton.Click += new System.EventHandler(this._cancelButton_Click);
             // 
             // _okButton
             // 
             this._okButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this._okButton.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this._okButton.Enabled = false;
             this._okButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._okButton.Location = new System.Drawing.Point(276, 348);
             this._okButton.Name = "_okButton";
             this._okButton.Size = new System.Drawing.Size(75, 23);
             this._okButton.TabIndex = 11;
             this._okButton.Text = "Ok";
-            this._okButton.Click += new System.EventHandler(this._buttonOk_Click);
+            this._okButton.Click += new System.EventHandler(this._okButton_Click);
             // 
             // _backgroundPanel
             // 
@@ -119,10 +113,35 @@ namespace Mogre.SDK.SampleBrowser
             this._backgroundPanel.Size = new System.Drawing.Size(446, 174);
             this._backgroundPanel.TabIndex = 12;
             // 
+            // _loadSamplesWorker
+            // 
+            this._loadSamplesWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this._loadSamplesWorker_DoWork);
+            this._loadSamplesWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this._loadSamplesWorker_RunWorkerCompleted);
+            // 
+            // _progressIndicator
+            // 
+            this._progressIndicator.Image = global::Mogre.SDK.SampleBrowser.Properties.Resources.loading_samples;
+            this._progressIndicator.Location = new System.Drawing.Point(12, 355);
+            this._progressIndicator.Name = "_progressIndicator";
+            this._progressIndicator.Size = new System.Drawing.Size(16, 16);
+            this._progressIndicator.TabIndex = 13;
+            this._progressIndicator.TabStop = false;
+            // 
+            // _logoPictureBox
+            // 
+            this._logoPictureBox.BackColor = System.Drawing.Color.White;
+            this._logoPictureBox.Image = global::Mogre.SDK.SampleBrowser.Properties.Resources.mogre_banner;
+            this._logoPictureBox.Location = new System.Drawing.Point(0, 3);
+            this._logoPictureBox.Name = "_logoPictureBox";
+            this._logoPictureBox.Size = new System.Drawing.Size(442, 174);
+            this._logoPictureBox.TabIndex = 3;
+            this._logoPictureBox.TabStop = false;
+            // 
             // BrowserForm
             // 
             this.ClientSize = new System.Drawing.Size(442, 380);
             this.ControlBox = false;
+            this.Controls.Add(this._progressIndicator);
             this.Controls.Add(this._okButton);
             this.Controls.Add(this._cancelButton);
             this.Controls.Add(this._videoOptionsGroup);
@@ -137,11 +156,15 @@ namespace Mogre.SDK.SampleBrowser
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MOGRE Sample Browser";
             this.Load += new System.EventHandler(this.ConfigDialog_Load);
-            ((System.ComponentModel.ISupportInitialize)(this._logoPictureBox)).EndInit();
             this._videoOptionsGroup.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this._previewPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._progressIndicator)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._logoPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
+
+        private BackgroundWorker _loadSamplesWorker;
+        private PictureBox _progressIndicator;
     }
 }

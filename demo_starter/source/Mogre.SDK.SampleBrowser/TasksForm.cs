@@ -28,14 +28,14 @@ namespace Mogre.SDK.SampleBrowser
             _descriptionTextBox.Text = _sample.Description;
         }
 
-        private void _radioButton_CheckedChanged(object sender, System.EventArgs e)
+        private void _radioButton_CheckedChanged(object sender, EventArgs e)
         {
             var radioButton = sender is RadioButton ? (RadioButton) sender : null;
             if (radioButton == null) return;
 
             if (radioButton.Checked)
             {
-                for (double i = 0; i < 1; i = i + 0.03d)
+                for (double i = 0; i < 1; i = i + 0.05d)
                 {
                     var eased = Easing.EaseInOut(i, EasingType.Quartic) * 10 + _origin;
                     radioButton.Left = (int)eased;
@@ -44,7 +44,7 @@ namespace Mogre.SDK.SampleBrowser
                     Thread.Sleep(5);
                 }
 
-                for (double i = 0; i < 1; i = i + 0.03d)
+                for (double i = 0; i < 1; i = i + 0.05d)
                 {
                     var eased = (_origin + 10) - Easing.EaseInOut(i, EasingType.Quartic) * 10;
                     radioButton.Left = (int)eased;
@@ -55,7 +55,7 @@ namespace Mogre.SDK.SampleBrowser
             }
         }
 
-        private void _okButton_Click(object sender, System.EventArgs e)
+        private void _okButton_Click(object sender, EventArgs e)
         {
             try
             {

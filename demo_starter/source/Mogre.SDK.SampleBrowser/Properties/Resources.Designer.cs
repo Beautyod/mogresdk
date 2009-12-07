@@ -60,6 +60,13 @@ namespace Mogre.SDK.SampleBrowser.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap loading_samples {
+            get {
+                object obj = ResourceManager.GetObject("loading_samples", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap mogre_banner {
             get {
                 object obj = ResourceManager.GetObject("mogre_banner", resourceCulture);

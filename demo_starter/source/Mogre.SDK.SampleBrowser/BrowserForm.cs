@@ -11,36 +11,32 @@ namespace Mogre.SDK.SampleBrowser
     public partial class BrowserForm : Form, IMessageFilter
     {
         private Stream _previewImageStream;
-        private readonly ConfigurationSerializer _serializer;
+        private ConfigurationSerializer _serializer;
 
         public BrowserForm()
         {
-            SetStyle( ControlStyles.DoubleBuffer, true );
             InitializeComponent();
 
-            _serializer = new ConfigurationSerializer();
+            _loadSamplesWorker.RunWorkerAsync();
         }
 
-        protected void _buttonOk_Click( object sender, EventArgs e )
+        protected void _okButton_Click(object sender, EventArgs e)
         {
             if (_samplesListBox.SelectedItem != null)
                 if (new TasksForm((ConfigurationSerializer.Sample) _samplesListBox.SelectedItem).ShowDialog() == DialogResult.OK)
                     Close();
         }
 
-        protected void _buttonCancel_Click( object sender, EventArgs e )
+        protected void _cancelButton_Click(object sender, EventArgs e)
         {
             Dispose();
         }
 
-        private void ConfigDialog_Load( object sender, EventArgs e )
+        private void ConfigDialog_Load(object sender, EventArgs e)
         {
             // Register [Enter] and [Esc] keys for Default buttons
-            _okButton.NotifyDefault( true );
+            _okButton.NotifyDefault(true);
             Application.AddMessageFilter(this);
-
-            PreviewImageStream = null;
-            PopulateSampleList();
         }
 
         public Stream PreviewImageStream
@@ -101,16 +97,33 @@ namespace Mogre.SDK.SampleBrowser
             var keyCode = (Keys)(int)msg.WParam & Keys.KeyCode;
             if ( msg.Msg == WM_KEYDOWN && keyCode == Keys.Return )
             {
-                _buttonOk_Click( this, null );
+                _okButton_Click( this, null );
                 return true;
             }
             if ( msg.Msg == WM_KEYDOWN && keyCode == Keys.Escape )
             {
-                _buttonCancel_Click( this, null );
+                _cancelButton_Click( this, null );
                 return true;
             }
             return false;
         }
         #endregion
+
+        private void _loadSamplesWorker_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        {
+            // The XML library of .NET is partially damn slow. So we use multithreading here.
+            _serializer = new ConfigurationSerializer();
+        }
+
+        private void _loadSamplesWorker_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
+        {
+            PopulateSampleList();
+            PreviewImageStream = null; // Set "Image Not Available"
+            _progressIndicator.Visible = false;
+            _progressIndicator.Dispose();
+            Controls.Remove(_progressIndicator);
+
+            _okButton.Enabled = true;
+        }
     }
 }
