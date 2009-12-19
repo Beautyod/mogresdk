@@ -21,6 +21,7 @@ DefaultDirName=C:\MogreSDK
 DefaultGroupName=Mogre SDK
 AllowNoIcons=yes
 LicenseFile=lgpl-2.1.txt
+InfoAfterFile=info_after_install.txt
 OutputDir=output
 OutputBaseFilename=MogreSDK_1.6.4_beta
 Compression=lzma
