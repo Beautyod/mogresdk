@@ -1,12 +1,12 @@
 ----- IMPORTANT -----
 Don't forget to install the needed depencies:
 
-* .Net Framework 2.0 (or higher version)
-..... http://tinyurl.com/zhjnu
+* .Net Framework 2.0 SP1 (or higher version)
+..... http://tinyurl.com/37hooa
 
 * DirectX 9.0c (March 2009 or newer)
 ..... direct download:   http://tinyurl.com/r4vsh5
-..... or use the web installer:   http://tinyurl.com/yu2rxu
+..... OR use the web installer:   http://tinyurl.com/yu2rxu
 
 * VC++ 2008 SP1 Redist
 ..... http://tinyurl.com/4pxesp
