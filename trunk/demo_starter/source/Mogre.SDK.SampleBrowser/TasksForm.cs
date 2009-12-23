@@ -30,6 +30,7 @@ namespace Mogre.SDK.SampleBrowser
 
         private void _radioButton_CheckedChanged(object sender, EventArgs e)
         {
+            // Do some nice eased animation ...
             var radioButton = sender is RadioButton ? (RadioButton) sender : null;
             if (radioButton == null) return;
 
@@ -61,13 +62,19 @@ namespace Mogre.SDK.SampleBrowser
             {
                 if (_runRadioButton.Checked)
                     Process.Start(_sample.ExecutablePath);
+                else if (MessageBox.Show(
+                             "The textual tutorials are not available yet. Do you want to go to the MOGRE wiki page instead?",
+                             "Tutorials not available yet", MessageBoxButtons.YesNo, MessageBoxIcon.Question) ==
+                         DialogResult.Yes)
+                    Process.Start("http://www.ogre3d.org/wiki/index.php/MOGRE");
                 else
-                    Process.Start(_sample.TutorialLink);
+                    DialogResult = DialogResult.Abort;
+                //Process.Start(_sample.TutorialLink);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(
-                    "There was an error processing your command. The error returned was:\n\n\"" + ex.Message + "\".",
+                    "There was an error processing your command. The error returned was:\n\"" + ex.Message + "\".",
                     "Error processing command", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 DialogResult = DialogResult.Abort;

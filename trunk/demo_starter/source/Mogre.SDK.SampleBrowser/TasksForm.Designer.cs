@@ -103,6 +103,7 @@
             // _okButton
             // 
             this._okButton.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this._okButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this._okButton.Location = new System.Drawing.Point(208, 216);
             this._okButton.Name = "_okButton";
             this._okButton.Size = new System.Drawing.Size(75, 23);
@@ -114,6 +115,7 @@
             // _cancelButton
             // 
             this._cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this._cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this._cancelButton.Location = new System.Drawing.Point(289, 216);
             this._cancelButton.Name = "_cancelButton";
             this._cancelButton.Size = new System.Drawing.Size(75, 23);
