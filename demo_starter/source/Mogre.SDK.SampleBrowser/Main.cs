@@ -9,6 +9,7 @@ namespace Mogre.SDK.SampleBrowser
     public static class Program
     {
         [STAThread]
+        [LoaderOptimization(LoaderOptimization.SingleDomain)]
         private static void Main()
         {
             try

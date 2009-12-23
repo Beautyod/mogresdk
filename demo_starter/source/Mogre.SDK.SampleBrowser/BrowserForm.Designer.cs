@@ -84,12 +84,13 @@ namespace Mogre.SDK.SampleBrowser
             // 
             this._cancelButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this._cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this._cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this._cancelButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._cancelButton.Location = new System.Drawing.Point(357, 348);
             this._cancelButton.Name = "_cancelButton";
             this._cancelButton.Size = new System.Drawing.Size(75, 23);
             this._cancelButton.TabIndex = 10;
-            this._cancelButton.Text = "Cancel";
+            this._cancelButton.Text = "&Cancel";
             this._cancelButton.Click += new System.EventHandler(this._cancelButton_Click);
             // 
             // _okButton
@@ -97,12 +98,13 @@ namespace Mogre.SDK.SampleBrowser
             this._okButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this._okButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             this._okButton.Enabled = false;
+            this._okButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this._okButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._okButton.Location = new System.Drawing.Point(276, 348);
             this._okButton.Name = "_okButton";
             this._okButton.Size = new System.Drawing.Size(75, 23);
             this._okButton.TabIndex = 11;
-            this._okButton.Text = "Ok";
+            this._okButton.Text = "&OK";
             this._okButton.Click += new System.EventHandler(this._okButton_Click);
             // 
             // _backgroundPanel
