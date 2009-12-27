@@ -4,7 +4,8 @@
 #define MyAppName "MOGRE SDK"
 #define MyAppVerName "MOGRE SDK 1.6.4 Beta"
 #define MyAppPublisher "Mogre Community"
-#define MyAppURL "http://mogre.sourceforge.net/"
+#define MyAppURL "http://www.ogre3d.org/wiki/index.php/MOGRE"
+; http://mogre.sourceforge.net --> redirection to MOGRE wiki
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
@@ -21,6 +22,7 @@ DefaultDirName=C:\MogreSDK
 DefaultGroupName=Mogre SDK
 AllowNoIcons=yes
 LicenseFile=lgpl-2.1.txt
+InfoBeforeFile=info_before_install.txt
 InfoAfterFile=info_after_install.txt
 OutputDir=output
 OutputBaseFilename=MogreSDK_1.6.4_beta
@@ -45,8 +47,9 @@ Source: ..\sdk_fs\*; DestDir: {app}; Flags: ignoreversion recursesubdirs createa
 [Icons]
 Name: {group}\Browse SDK folder; Filename: {app}
 Name: {group}\Build samples; Filename: {app}\BuildSamples.cmd; WorkingDir: {app}
-Name: {group}\Links\MOGRE Website; Filename: {#MyAppURL}
+Name: {group}\Links\MOGRE Wiki; Filename: http://www.ogre3d.org/wiki/index.php/MOGRE
 Name: {group}\Links\Official MOGRE Forum; Filename: http://www.ogre3d.org/phpBB2addons/viewforum.php?f=8
+Name: {group}\Report problems with Mogre SDK; Filename: http://www.ogre3d.org/addonforums/viewtopic.php?f=8&t=11703
 Name: {group}\Links\Project page at Sourceforge.net; Filename: http://sourceforge.net/projects/mogre
 Name: {group}\Links\Browse the sources; Filename: http://mogre.svn.sourceforge.net/viewvc/mogre/
 
