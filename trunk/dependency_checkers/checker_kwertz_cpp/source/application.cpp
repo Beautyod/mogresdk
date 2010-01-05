@@ -190,11 +190,11 @@ perform:
 
 	if (checksPassed)
 	{
-	   if (
-		   MessageBox(NULL, "Your system configuration passed all checks. Do you want to build the samples now?", 
-		   "Checks complete", MB_YESNO | MB_ICONQUESTION)
-		   == IDYES
-		   )
+		int dialogResult = MessageBox(NULL, "Your system configuration passed all checks. Do you want to build the samples now?\nIn order to build the samples, you have to install the .NET Framework 3.5 because of MSBuild.\n\nClick on 'Yes' to do this. In case you don't want to do it now because you already installed it and want build the samples, click on 'No'.\nIf you neither want to install the .NET Framework 3.5 nor want to build the samples, click on 'Cancel'.", 
+									   "Checks complete", MB_YESNOCANCEL | MB_ICONQUESTION);
+		if (dialogResult == IDYES)
+			ShellExecute(NULL, "open", "http://www.microsoft.com/downloads/details.aspx?FamilyId=333325FD-AE52-4E35-B531-508D977D32A6&displaylang=en", NULL, NULL, SW_SHOWNORMAL);
+		else if (dialogResult == IDNO)
 			ShellExecute(NULL, "open", "BuildSamples.cmd", NULL, ".", SW_SHOWNORMAL);
 	}
 	else
