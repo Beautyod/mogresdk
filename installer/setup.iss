@@ -2,6 +2,8 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 ; NEEDSREVISION: Normal installation, Windows XP Professional SP3 32-bit -> Attempt to uninstall -> "This installation can only be uninstalled on 64-bit Windows." -> ???
+; SOLVED! Problem was: Invalid unins000.dat
+; WORKAROUND: Delete unins000.dat, reinstall the SDK and then the uninstallation should work fine
 
 #define MyAppName "MOGRE SDK"
 #define MyAppVerName "MOGRE SDK 1.6.5 beta"
