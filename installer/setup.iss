@@ -68,6 +68,7 @@ Filename: {tmp}\7z.exe; Parameters: e pdb.7z -o{app}\bin\Release -y; WorkingDir:
 Filename: {app}\dependencycheck.exe; WorkingDir: {app}; StatusMsg: Checking for required dependencies ...; Languages: 
 Filename: {win}\Microsoft.NET\Framework\v2.0.50727\ngen.exe; Parameters: "install ""{app}\bin\Release\browser.exe"""; WorkingDir: {app}; StatusMsg: Optimizing performance for your system ...; Flags: runhidden
 Filename: {win}\Microsoft.NET\Framework\v2.0.50727\ngen.exe; Parameters: "install ""{app}\bin\Release\Mogre.dll"""; WorkingDir: {app}; StatusMsg: Optimizing performance for your system ...; Flags: runhidden
+Filename: {app}\bin\Release\browser.exe; WorkingDir: {app}\bin\Release; Flags: nowait postinstall; Description: Launch sample browser; Components: ; Languages: 
 
 [Components]
 Name: Debug_symbols; Description: Debug symbols for Mogre.dll and OgreMain.dll; ExtraDiskSpaceRequired: 272945152; Types: custom
