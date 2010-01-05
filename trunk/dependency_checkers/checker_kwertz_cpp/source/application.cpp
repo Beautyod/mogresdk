@@ -1,5 +1,6 @@
 #define ANFP
 #define _CRT_SECURE_NO_WARNINGS
+#define FCLOSE_WORKAROUND
 
 #include "stdinc.h"
 
@@ -12,7 +13,12 @@ bool FileExists(const char* filename)
 
 	file = fopen(filename, "r");
 	bool exists = !(file == NULL);
+
+	// BUG: On some systems, the closing a file using tlibc causes an access violation
+	// WORKAROUND: Don't do it, simply!
+#ifndef FCLOSE_WORKAROUND
 	fclose(file);
+#endif
 
 	return exists;
 }
