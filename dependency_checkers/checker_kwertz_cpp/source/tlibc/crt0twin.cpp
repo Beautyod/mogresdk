@@ -13,6 +13,12 @@
 #pragma comment(linker, "/nodefaultlib:libcmt.lib")
 #pragma comment(linker, "/nodefaultlib:libcmtd.lib")
 
+#define SAME_AS_CONSOLE
+
+#ifdef SAME_AS_CONSOLE
+EXTERN_C int _tmain(int, TCHAR **, TCHAR **);
+#endif
+
 int __argc;
 TCHAR **__targv;
 
@@ -22,6 +28,18 @@ int WINAPI wWinMain(HINSTANCE, HINSTANCE, LPWSTR, int);
 
 EXTERN_C void WinMainCRTStartup()
 {
+#ifdef SAME_AS_CONSOLE
+	int argc = _init_args();
+    _init_atexit();
+	_init_file();
+    _initterm(__xc_a, __xc_z);
+
+    int ret = _tmain(argc, _argv, 0);
+
+	_doexit();
+	_term_args();
+    ExitProcess(ret);
+#else
 	__argc = _init_args();
 	__targv = _argv;
 	_init_file();
@@ -58,4 +76,5 @@ EXTERN_C void WinMainCRTStartup()
 	_doexit();
 	_term_args();
 	ExitProcess(ret);
+#endif
 }
