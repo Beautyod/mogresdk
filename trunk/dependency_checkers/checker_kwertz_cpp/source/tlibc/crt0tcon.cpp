@@ -16,7 +16,11 @@
 
 EXTERN_C int _tmain(int, TCHAR **, TCHAR **);    // In user's code
 
-EXTERN_C void WinMainCRTStartup()
+#ifdef UNICODE
+EXTERN_C void wmainCRTStartup()
+#else
+EXTERN_C void mainCRTStartup()
+#endif
 {
     int argc = _init_args();
     _init_atexit();

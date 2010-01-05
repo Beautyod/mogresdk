@@ -20,7 +20,7 @@ TCHAR **__targv;
 int WINAPI wWinMain(HINSTANCE, HINSTANCE, LPWSTR, int);
 #endif
 
-EXTERN_C void _tWinMainCRTStartup()
+EXTERN_C void WinMainCRTStartup()
 {
 	__argc = _init_args();
 	__targv = _argv;
