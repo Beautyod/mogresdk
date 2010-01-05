@@ -32,8 +32,8 @@ OutputDir=output
 OutputBaseFilename=MogreSDK_1.6.5_beta
 SolidCompression=yes
 
-Compression=lzma/fast
-; Compression=lzma/ultra64
+; Compression=lzma/fast
+Compression=lzma/ultra64
 ; lzma/ultra64 is the best compression. This would be good for download of a large SDK setup.
 ; But it needs more compression time, about 700MB RAM for compression and 70 MB for decompression.
 ; For SDK developer tests you can use lzma/fast.
