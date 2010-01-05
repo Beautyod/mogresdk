@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "MOGRE SDK"
-#define MyAppVerName "MOGRE SDK 1.6.4 Beta"
+#define MyAppVerName "MOGRE SDK 1.6.5 beta"
 #define MyAppPublisher "Mogre Community"
 #define MyAppURL "http://www.ogre3d.org/wiki/index.php/MOGRE"
 ; http://mogre.sourceforge.net --> redirection to MOGRE wiki
@@ -25,11 +25,11 @@ LicenseFile=lgpl-2.1.txt
 InfoBeforeFile=info_before_install.txt
 InfoAfterFile=info_after_install.txt
 OutputDir=output
-OutputBaseFilename=MogreSDK_1.6.4_beta
+OutputBaseFilename=MogreSDK_1.6.5_beta
 SolidCompression=yes
 
-; Compression=lzma/fast
-Compression=lzma/ultra64
+Compression=lzma/fast
+; Compression=lzma/ultra64
 ; lzma/ultra64 is the best compression. This would be good for download of a large SDK setup.
 ; But it needs more compression time, about 700MB RAM for compression and 70 MB for decompression.
 ; For SDK developer tests you can use lzma/fast.
@@ -59,3 +59,5 @@ Name: {app}\Sample Browser; Filename: {app}\bin\Release\browser.exe; WorkingDir:
 
 [Run]
 Filename: {win}\Microsoft.NET\Framework\v2.0.50727\ngen.exe; Parameters: "install ""{app}\bin\Release\browser.exe"""; WorkingDir: {app}; StatusMsg: Optimizing performance for your system ...; Flags: runhidden
+Filename: {win}\Microsoft.NET\Framework\v2.0.50727\ngen.exe; Parameters: "install ""{app}\bin\Release\Mogre.dll"""; WorkingDir: {app}; StatusMsg: Optimizing performance for your system ...; Flags: runhidden
+Filename: {app}\dependencycheck.exe; WorkingDir: {app}; StatusMsg: Checking for required dependencies ...
