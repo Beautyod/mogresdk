@@ -15,7 +15,7 @@ bool FileExists(const char* filename)
 	bool exists = !(file == NULL);
 
 	// BUG: On some systems, the closing a file using tlibc causes an access violation
-	// WORKAROUND: Don't do it, simply!
+	// WORKAROUND: Don't do it, simply! The file is closed on ExitProcess anyways.
 #ifndef FCLOSE_WORKAROUND
 	fclose(file);
 #endif
