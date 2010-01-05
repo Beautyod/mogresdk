@@ -1,8 +1,8 @@
-Thanks for installing the Mogre SDK.
+Thanks for installing the MOGRE SDK.
 
-If you have PROBLEMS with the SDK, please REPORT it and we help you.
+If you have PROBLEMS with the SDK, please REPORT them and we will help you.
 Add information about your operation system (e.g. Windows XP SP2, 32bit).
 The support link will be created in your start menu.
 
-If there is no problem, feel free to post it, too (-;
+If there is no problem, feel free to post, too (-;
 
