@@ -63,8 +63,8 @@ Name: {group}\{cm:UninstallProgram,{#MyAppName}}; Filename: {uninstallexe}
 Name: {app}\Sample Browser; Filename: {app}\bin\Release\browser.exe; WorkingDir: {app}\bin\Release
 
 [Run]
-Filename: {tmp}\7z.exe; Parameters: e pdb_d.7z -o{app}\bin\Debug -y; WorkingDir: {tmp}; Components: Debug_symbols; Languages: ; StatusMsg: Extracting downloaded debug symbols for debug binaries ...; Flags: runhidden
-Filename: {tmp}\7z.exe; Parameters: e pdb.7z -o{app}\bin\Release -y; WorkingDir: {tmp}; Components: Debug_symbols; Languages: ; StatusMsg: Extracting downloaded debug symbols for release binaries ...; Flags: runhidden
+Filename: {tmp}\7z.exe; Parameters: e pdb_d.7z -o{app}\bin\Debug -y; WorkingDir: {tmp}; Components: Debug_symbols; Languages: ; StatusMsg: Extracting downloaded debug files (*.pdb) for debug binaries ...; Flags: runhidden
+Filename: {tmp}\7z.exe; Parameters: e pdb.7z -o{app}\bin\Release -y; WorkingDir: {tmp}; Components: Debug_symbols; Languages: ; StatusMsg: Extracting downloaded debug files (*.pdb) for release binaries ...; Flags: runhidden
 Filename: {app}\dependencycheck.exe; WorkingDir: {app}; StatusMsg: Checking for required dependencies ...; Languages: 
 Filename: {win}\Microsoft.NET\Framework\v2.0.50727\ngen.exe; Parameters: "install ""{app}\bin\Release\browser.exe"""; WorkingDir: {app}; StatusMsg: Optimizing performance for your system ...; Flags: runhidden
 Filename: {win}\Microsoft.NET\Framework\v2.0.50727\ngen.exe; Parameters: "install ""{app}\bin\Release\Mogre.dll"""; WorkingDir: {app}; StatusMsg: Optimizing performance for your system ...; Flags: runhidden
