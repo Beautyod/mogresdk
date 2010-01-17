@@ -1,4 +1,4 @@
-#define ANFP
+//#define ANFP
 #define _CRT_SECURE_NO_WARNINGS
 //#define FCLOSE_WORKAROUND
 
@@ -38,7 +38,7 @@ bool FileExists(const char* filename)
 *
 **************************************************************************************************/
 
-int check(int major, int minor, int build)
+int check(int major, int minor/*, int build*/)
 {
    //
    // Variables for registry functions parameter construction
@@ -74,7 +74,7 @@ int check(int major, int minor, int build)
    wsprintf(root, "SOFTWARE\\Microsoft\\.NETFramework\\policy\\v%d.%d", major, minor);
    wsprintf(bld, "%d", build);
 #else
-   wsprintf(root, "SOFTWARE\\Microsoft\\NET Framework Setup\\NDP\\v%d.%d.%d", major, minor, build);
+   wsprintf(root, "SOFTWARE\\Microsoft\\NET Framework Setup\\NDP\\v%d.%d" /*".%d"*/, major, minor /*, build*/);
 #endif
 
    //
@@ -125,19 +125,19 @@ int main(/*int argc, char **argv*/)
 	// TODO: Implement the other checks
 
 	//
-	// Check for .NET Framework 2.0
+	// Check for .NET Framework 3.5
 	//
-	int major = 2;
-	int minor = 0;
-	int build = 50727;
+	int major = 3;
+	int minor = 5;
+	//int build = 30729;
 
 perform:
 
-	dotNet = check(major, minor, build) == 1;
+	dotNet = check(major, minor/*, build*/) == 1;
 
 	if (!dotNet)
 		if (
-			MessageBox(NULL, "The .NET Framework 2.0 required to run MOGRE could not be found.\nDo you want to download it?", 
+			MessageBox(NULL, "The .NET Framework 3.5 required to run MOGRE could not be found.\nDo you want to download it?", 
 		   "Dependency missing", MB_YESNO | MB_ICONQUESTION)
 		   == IDYES
 		   )
@@ -190,11 +190,9 @@ perform:
 
 	if (checksPassed)
 	{
-		int dialogResult = MessageBox(NULL, "Your system configuration passed all checks. Do you want to build the samples now?\nIn order to build the samples, you have to install the .NET Framework 3.5 because of MSBuild.\n\nClick on 'Yes' to do this. In case you don't want to do it now because you already installed it and want to build the samples, click on 'No'.\nIf you neither want to install the .NET Framework 3.5 nor want to build the samples, click on 'Cancel'.", 
-									   "Checks complete", MB_YESNOCANCEL | MB_ICONQUESTION);
+		int dialogResult = MessageBox(NULL, "Your system configuration passed all checks. Do you want to build the samples now?", 
+									   "Checks complete", MB_YESNO | MB_ICONQUESTION);
 		if (dialogResult == IDYES)
-			ShellExecute(NULL, "open", "http://www.microsoft.com/downloads/details.aspx?FamilyId=333325FD-AE52-4E35-B531-508D977D32A6&displaylang=en", NULL, NULL, SW_SHOWNORMAL);
-		else if (dialogResult == IDNO)
 			ShellExecute(NULL, "open", "BuildSamples.cmd", NULL, ".", SW_SHOWNORMAL);
 	}
 	else
