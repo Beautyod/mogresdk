@@ -137,8 +137,10 @@ perform:
 
 	if (!dotNet)
 		if (
-			MessageBox(NULL, "The .NET Framework 3.5 required to run MOGRE could not be found.\nDo you want to download it?", 
-		   "Dependency missing", MB_YESNO | MB_ICONQUESTION)
+			MessageBox(NULL, "MOGRE needs at least the .NET Framework 2.0.\n" 
+						   + "But for automatically build of the MOGRE samples you need .NET 3.5.\n" 
+						   + "Do you want to download the .NET Framework 3.5 now?", 
+			"Dependency missing", MB_YESNO | MB_ICONQUESTION)
 		   == IDYES
 		   )
 			ShellExecute(NULL, "open", "http://www.microsoft.com/downloads/details.aspx?FamilyId=333325FD-AE52-4E35-B531-508D977D32A6&displaylang=en", NULL, NULL, SW_SHOWNORMAL);
@@ -160,7 +162,9 @@ perform:
 
 	if (!directX)
 		if (
-			MessageBox(NULL, "DirectX 9.0c, which is required to run MOGRE, could not be found.\nDo you want to download it?", 
+			MessageBox(NULL, "DirectX is outdated or not installed.\n"
+			               + "For MOGRE you need at least DirectX 9.0c of March 2009.\n"
+			               + "Do you want to download the latest revision of DirectX 9.0c?", 
 			"Dependency missing", MB_YESNO | MB_ICONQUESTION)
 			== IDYES
 		)
@@ -177,7 +181,8 @@ perform:
 
 	if (!msvcrt)
 		if (
-			MessageBox(NULL, "The Microsoft Visual C++ 2008 SP1 runtime required to run MOGRE could not be found.\nDo you want to download it?", 
+			MessageBox(NULL, "It's recommended to install the \"Microsoft Visual C++ 2008 SP1 Redistributable Package\"."
+			               + "Do you want to download it?", 
 			"Dependency missing", MB_YESNO | MB_ICONQUESTION)
 			== IDYES
 		)
@@ -190,21 +195,26 @@ perform:
 
 	if (checksPassed)
 	{
-		int dialogResult = MessageBox(NULL, "Your system configuration passed all checks. Do you want to build the samples now?", 
-									   "Checks complete", MB_YESNO | MB_ICONQUESTION);
+		int dialogResult = MessageBox(NULL, "Your system configuration passed all checks.\n"
+			                              + "Do you want to build the samples now?", 
+			"Checks complete", MB_YESNO | MB_ICONQUESTION);
 		if (dialogResult == IDYES)
 			ShellExecute(NULL, "open", "BuildSamples.cmd", NULL, ".", SW_SHOWNORMAL);
 	}
 	else
 	{
 		if (
-			MessageBox(NULL, "There were one or more dependencies missing. Do you want to perform the checks again?",
+			MessageBox(NULL, "There were one or more dependencies missing. \n"
+			               + "Do you want to perform the checks again?",
 			"One or more checks failed", MB_YESNO | MB_ICONWARNING)
 			== IDYES
 			)
 			 goto perform;
 		else
-			 MessageBox(NULL, "You choose to skip the depencency checks. Please note that no MOGRE-based application will run until all dependencies are installed.\nTo perform the checks again, please re-run this application by hand (dependencycheck.exe in the SDK root folder).",
+			 MessageBox(NULL, "You choose to skip the depencency checks.\n"
+			                + "Please note that no MOGRE-based application will run until all dependencies are installed.\n" 
+							+ "To perform the checks again, please re-run this checker application manually. \n"
+							+ "(Use file \"dependencycheck.exe\" in the SDK root folder).",
 			 "Dependency checks skipped", MB_ICONWARNING);
 	}
 
