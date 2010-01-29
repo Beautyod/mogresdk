@@ -1,25 +1,4 @@
 ------------------------------------------------------------------------
-Changes since MOGRE v1.6.4
-------------------------------------------------------------------------
-
-Mogre
-----------
--- Updated to Ogre 1.6.5
-
-Checker
-----------
--- Added a fully featured dependency checker based on tlibc
-
-MogreNewt
-----------
--- Updated to Newton 2.10
--- Now statically linked
-
-MOIS
-----------
--- Now statically linked
-
-------------------------------------------------------------------------
 Changes since MOGRE v1.4.8
 ------------------------------------------------------------------------
 

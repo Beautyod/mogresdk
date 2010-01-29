@@ -45,7 +45,7 @@ namespace Ogre
         LARGE_INTEGER mStartTime;
         LARGE_INTEGER mFrequency;
 
-		DWORD_PTR mTimerMask;
+		DWORD mTimerMask;
     public:
 		/** Timer constructor.  MUST be called on same thread that calls getMilliseconds() */
 		Timer();
