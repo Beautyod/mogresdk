@@ -1,0 +1,12 @@
+C:\Dokumente und Einstellungen\Tobias Bohnen\Eigene Dateien\Eigene Projekte\DotNet\C-Sharp\Projekte\Mogre Basic Tutorials\MogreFramework\obj\Debug\ResolveAssemblyReference.cache
+C:\Dokumente und Einstellungen\Tobias Bohnen\Eigene Dateien\Eigene Projekte\DotNet\C-Sharp\Projekte\Mogre Basic Tutorials\MogreFramework\obj\Debug\MogreFramework.OgreWindow.resources
+C:\Dokumente und Einstellungen\Tobias Bohnen\Eigene Dateien\Eigene Projekte\DotNet\C-Sharp\Projekte\Mogre Basic Tutorials\MogreFramework\obj\Debug\MogreFramework.Properties.Resources.resources
+C:\Dokumente und Einstellungen\Tobias Bohnen\Eigene Dateien\Eigene Projekte\DotNet\C-Sharp\Projekte\Mogre Basic Tutorials\MogreFramework\obj\Debug\MogreFramework.Splash.resources
+C:\Dokumente und Einstellungen\Tobias Bohnen\Eigene Dateien\Eigene Projekte\DotNet\C-Sharp\Projekte\Mogre Basic Tutorials\MogreFramework\obj\Debug\MogreFramework.csproj.GenerateResource.Cache
+C:\Dokumente und Einstellungen\Tobias Bohnen\Eigene Dateien\Eigene Projekte\DotNet\C-Sharp\Projekte\Mogre Basic Tutorials\MogreFramework\bin\Debug\MogreFramework.dll
+C:\Dokumente und Einstellungen\Tobias Bohnen\Eigene Dateien\Eigene Projekte\DotNet\C-Sharp\Projekte\Mogre Basic Tutorials\MogreFramework\bin\Debug\MogreFramework.pdb
+C:\Dokumente und Einstellungen\Tobias Bohnen\Eigene Dateien\Eigene Projekte\DotNet\C-Sharp\Projekte\Mogre Basic Tutorials\MogreFramework\bin\Debug\Mogre.dll
+C:\Dokumente und Einstellungen\Tobias Bohnen\Eigene Dateien\Eigene Projekte\DotNet\C-Sharp\Projekte\Mogre Basic Tutorials\MogreFramework\obj\Debug\MogreFramework.dll
+C:\Dokumente und Einstellungen\Tobias Bohnen\Eigene Dateien\Eigene Projekte\DotNet\C-Sharp\Projekte\Mogre Basic Tutorials\MogreFramework\obj\Debug\MogreFramework.pdb
+C:\Dokumente und Einstellungen\Tobias Bohnen\Eigene Dateien\Eigene Projekte\DotNet\C-Sharp\Projekte\Mogre Basic Tutorials\bin\Debug\MogreFramework.dll
+C:\Dokumente und Einstellungen\Tobias Bohnen\Eigene Dateien\Eigene Projekte\DotNet\C-Sharp\Projekte\Mogre Basic Tutorials\bin\Debug\MogreFramework.pdb
