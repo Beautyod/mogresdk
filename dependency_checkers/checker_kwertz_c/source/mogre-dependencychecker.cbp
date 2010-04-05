@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="mogre-dependencychecker" />
+		<Option pch_mode="2" />
+		<Option compiler="tcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="..\binaries\dependencycheck" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="..\binaries" />
+				<Option object_output="obj\Debug\" />
+				<Option type="0" />
+				<Option compiler="tcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add option="win32-visualstyles.o" />
+					<Add library="advapi32" />
+					<Add library="shell32" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="..\binaries\dependencycheck" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="..\binaries" />
+				<Option object_output="obj\Release\" />
+				<Option type="0" />
+				<Option compiler="tcc" />
+				<Linker>
+					<Add option="win32-visualstyles.o" />
+					<Add library="advapi32" />
+					<Add library="shell32" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="dependencycheckers.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="dependencycheckers.h" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="strings.h" />
+		<Unit filename="windowcreator.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="windowcreator.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
