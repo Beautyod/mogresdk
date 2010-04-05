@@ -1,0 +1,52 @@
+# depslib dependency file v1.0
+1262389254 source:e:\c\mogre-dependencychecker\mogre-dependencychecker\main.c
+	<windows.h>
+
+1262387975 source:e:\c\mogre-dependencychecker\mogre-dependencychecker\dependencycheckers.c
+	<stdio.h>
+	<windows.h>
+
+1262398367 source:e:\c\mogre-dependencychecker\main.c
+	<windows.h>
+	"windowcreator.h"
+
+1262398696 source:e:\c\mogre-dependencychecker\dependencycheckers.c
+	<stdio.h>
+	<windows.h>
+	"dependencycheckers.h"
+
+1262399429 e:\c\mogre-dependencychecker\dependencycheckers.h
+
+1262397604 e:\c\mogre-dependencychecker\windowcreator.h
+
+1262438810 source:e:\c\mogre-dependencychecker\windowcreator.c
+	<windows.h>
+	<shellapi.h>
+	"windowcreator.h"
+	"dependencycheckers.h"
+	"strings.h"
+
+1262438972 e:\c\mogre-dependencychecker\strings.h
+
+1262463921 source:e:\mogre_sdk\dependency_checkers\checker_kwertz_c\source\main.c
+	<windows.h>
+	"windowcreator.h"
+
+1262463992 e:\mogre_sdk\dependency_checkers\checker_kwertz_c\source\windowcreator.h
+
+1262438810 source:e:\mogre_sdk\dependency_checkers\checker_kwertz_c\source\windowcreator.c
+	<windows.h>
+	<shellapi.h>
+	"windowcreator.h"
+	"dependencycheckers.h"
+	"strings.h"
+
+1262399429 e:\mogre_sdk\dependency_checkers\checker_kwertz_c\source\dependencycheckers.h
+
+1262438972 e:\mogre_sdk\dependency_checkers\checker_kwertz_c\source\strings.h
+
+1262398696 source:e:\mogre_sdk\dependency_checkers\checker_kwertz_c\source\dependencycheckers.c
+	<stdio.h>
+	<windows.h>
+	"dependencycheckers.h"
+
