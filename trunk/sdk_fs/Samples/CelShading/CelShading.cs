@@ -45,25 +45,25 @@ namespace Mogre.Demo.CelShading
             SubEntity sub;
             // eyes
             sub = ent.GetSubEntity(0);
-            sub.MaterialName = ("Examples/CelShading");
+            sub.SetMaterialName("Examples/CelShading");
             sub.SetCustomParameter(CUSTOM_SHININESS, new Vector4(35.0f, 0.0f, 0.0f, 0.0f));
             sub.SetCustomParameter(CUSTOM_DIFFUSE, new Vector4(1.0f, 0.3f, 0.3f, 1.0f));
             sub.SetCustomParameter(CUSTOM_SPECULAR, new Vector4(1.0f, 0.6f, 0.6f, 1.0f));
             // skin
             sub = ent.GetSubEntity(1);
-            sub.MaterialName = ("Examples/CelShading");
+            sub.SetMaterialName("Examples/CelShading");
             sub.SetCustomParameter(CUSTOM_SHININESS, new Vector4(10.0f, 0.0f, 0.0f, 0.0f));
             sub.SetCustomParameter(CUSTOM_DIFFUSE, new Vector4(0.0f, 0.5f, 0.0f, 1.0f));
             sub.SetCustomParameter(CUSTOM_SPECULAR, new Vector4(0.3f, 0.5f, 0.3f, 1.0f));
             // earring
             sub = ent.GetSubEntity(2);
-            sub.MaterialName = ("Examples/CelShading");
+            sub.SetMaterialName("Examples/CelShading");
             sub.SetCustomParameter(CUSTOM_SHININESS, new Vector4(25.0f, 0.0f, 0.0f, 0.0f));
             sub.SetCustomParameter(CUSTOM_DIFFUSE, new Vector4(1.0f, 1.0f, 0.0f, 1.0f));
             sub.SetCustomParameter(CUSTOM_SPECULAR, new Vector4(1.0f, 1.0f, 0.7f, 1.0f));
             // teeth
             sub = ent.GetSubEntity(3);
-            sub.MaterialName = ("Examples/CelShading");
+            sub.SetMaterialName("Examples/CelShading");
             sub.SetCustomParameter(CUSTOM_SHININESS, new Vector4(20.0f, 0.0f, 0.0f, 0.0f));
             sub.SetCustomParameter(CUSTOM_DIFFUSE, new Vector4(1.0f, 1.0f, 0.7f, 1.0f));
             sub.SetCustomParameter(CUSTOM_SPECULAR, new Vector4(1.0f, 1.0f, 1.0f, 1.0f));
