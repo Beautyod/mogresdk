@@ -263,7 +263,7 @@ namespace Mogre.Demo.Dot3Bump
 					mLightPivots[i].AttachObject(mLights[i]);
 					//create billboard for the light
 					mLightFlareSets[i]=sceneMgr.CreateBillboardSet("Flare"+i.ToString());
-					mLightFlareSets[i].MaterialName="Examples/Flare";
+					mLightFlareSets[i].SetMaterialName("Examples/Flare");
 					mLightPivots[i].AttachObject(mLightFlareSets[i]);
 					mLightFlares[i]=mLightFlareSets[i].CreateBillboard(mLightPositions[i]);
 					mLightFlares[i].Colour=mDiffuseLightColours[i];

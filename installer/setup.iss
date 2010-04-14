@@ -6,7 +6,7 @@
 ; WORKAROUND: Delete unins000.dat, reinstall the SDK and then the uninstallation should work fine
 
 #define MyAppName "MOGRE SDK"
-#define MyAppVerName "MOGRE SDK 1.6.5 beta"
+#define MyAppVerName "MOGRE SDK 1.7.0 beta"
 #define MyAppPublisher "Mogre Community"
 #define MyAppURL "http://www.ogre3d.org/wiki/index.php/MOGRE"
 ; http://mogre.sourceforge.net --> redirection to MOGRE wiki
@@ -29,7 +29,7 @@ LicenseFile=lgpl-2.1.txt
 InfoBeforeFile=info_before_install.txt
 InfoAfterFile=info_after_install.txt
 OutputDir=output
-OutputBaseFilename=MogreSDK_1.6.5_beta
+OutputBaseFilename=MogreSDK_1.7.0_beta
 SolidCompression=yes
 
 ; Compression=lzma/fast
