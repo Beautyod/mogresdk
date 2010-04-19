@@ -32,6 +32,9 @@ OutputDir=output
 OutputBaseFilename=MogreSDK_1.7.0_beta
 SolidCompression=yes
 
+; Provide an uninstall icon
+UninstallDisplayIcon={app}\ogre_engraved_bgradient_appicon.ico
+
 ; Compression=lzma/fast
 Compression=lzma/ultra64
 ; lzma/ultra64 is the best compression. This would be good for download of a large SDK setup.
@@ -46,6 +49,7 @@ Name: english; MessagesFile: compiler:Default.isl
 
 [Files]
 Source: ..\sdk_fs\*; DestDir: {app}; Flags: recursesubdirs createallsubdirs comparetimestamp confirmoverwrite
+Source: ..\misc\media\icons\ogre_engraved_bgradient_appicon.ico; DestDir: {app}
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
