@@ -1,5 +1,5 @@
 ----- IMPORTANT -----
-Don't forget to install the needed depencies:
+Don't forget to install the needed dependencies if you haven't already done so:
 
 * .Net Framework 2.0 SP1 (or higher version)
 ..... 32bit Windows: http://tinyurl.com/37hooa
