@@ -1,0 +1,22 @@
+----- IMPORTANT -----
+Don't forget to install the needed dependencies if you haven't already done so:
+
+* .Net Framework 2.0 SP1 (or higher version)
+..... 32bit Windows: http://tinyurl.com/37hooa
+..... 64bit Windows: http://tinyurl.com/c5ao47
+
+* DirectX 9.0c (March 2009 or newer)
+..... direct download:   http://tinyurl.com/r4vsh5
+..... OR use the web installer:   http://tinyurl.com/yu2rxu
+
+* VC++ 2008 SP1 Redist
+..... http://tinyurl.com/4pxesp
+
+
+If you have Visual Studio 2008:
+..... Install the Service Pack 1 for Visual Studio 2008
+..... http://tinyurl.com/ygu2ry5
+
+If you don't have Visual Studio 2008:
+..... you can use the free Visual C# 2008 Express Edition
+..... http://www.microsoft.com/express/vcsharp

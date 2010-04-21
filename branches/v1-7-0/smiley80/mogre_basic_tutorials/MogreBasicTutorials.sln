@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+# SharpDevelop 3.0.0.3778
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MogreFramework", "MogreFramework\MogreFramework.csproj", "{8D9F9D90-DDB7-4174-BA7B-1112CEE9A88F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial1", "Tutorial1\Tutorial1.csproj", "{585F3E13-1EF1-4C45-B61F-CD851A48B528}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial2", "Tutorial2\Tutorial2.csproj", "{CB198818-9EAE-4868-9F2B-AD8252EB5BB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial3", "Tutorial3\Tutorial3.csproj", "{8B9380B8-920A-43D7-9EA9-AF5272F57612}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial4", "Tutorial4\Tutorial4.csproj", "{4678B288-5C62-4387-AFEF-50F240A9D92D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial5", "Tutorial5\Tutorial5.csproj", "{7D88A238-9B94-44DC-A301-34022CE55657}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial6", "Tutorial6\Tutorial6.csproj", "{D1D05EEE-1482-49D6-9082-2BFF299F5131}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D9F9D90-DDB7-4174-BA7B-1112CEE9A88F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D9F9D90-DDB7-4174-BA7B-1112CEE9A88F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D9F9D90-DDB7-4174-BA7B-1112CEE9A88F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D9F9D90-DDB7-4174-BA7B-1112CEE9A88F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{585F3E13-1EF1-4C45-B61F-CD851A48B528}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{585F3E13-1EF1-4C45-B61F-CD851A48B528}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{585F3E13-1EF1-4C45-B61F-CD851A48B528}.Release|Any CPU.Build.0 = Release|Any CPU
+		{585F3E13-1EF1-4C45-B61F-CD851A48B528}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB198818-9EAE-4868-9F2B-AD8252EB5BB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB198818-9EAE-4868-9F2B-AD8252EB5BB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB198818-9EAE-4868-9F2B-AD8252EB5BB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB198818-9EAE-4868-9F2B-AD8252EB5BB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B9380B8-920A-43D7-9EA9-AF5272F57612}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B9380B8-920A-43D7-9EA9-AF5272F57612}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B9380B8-920A-43D7-9EA9-AF5272F57612}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B9380B8-920A-43D7-9EA9-AF5272F57612}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4678B288-5C62-4387-AFEF-50F240A9D92D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4678B288-5C62-4387-AFEF-50F240A9D92D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4678B288-5C62-4387-AFEF-50F240A9D92D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4678B288-5C62-4387-AFEF-50F240A9D92D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D88A238-9B94-44DC-A301-34022CE55657}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D88A238-9B94-44DC-A301-34022CE55657}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D88A238-9B94-44DC-A301-34022CE55657}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D88A238-9B94-44DC-A301-34022CE55657}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1D05EEE-1482-49D6-9082-2BFF299F5131}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1D05EEE-1482-49D6-9082-2BFF299F5131}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1D05EEE-1482-49D6-9082-2BFF299F5131}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1D05EEE-1482-49D6-9082-2BFF299F5131}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+EndGlobal
