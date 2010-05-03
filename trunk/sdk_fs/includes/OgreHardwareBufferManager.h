@@ -106,11 +106,8 @@ namespace Ogre {
 		and passes it to the HardwareBufferManager superclass as a delegate. 
 		This subclass must also delete the implementation instance it creates.
 	*/
-	class _OgreExport HardwareBufferManagerBase : public BufferAlloc, public CLRObject
+	class _OgreExport HardwareBufferManagerBase : public BufferAlloc
 	{
-	public:
-       DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(HardwareBufferManagerBase);
-    private:
         friend class HardwareVertexBufferSharedPtr;
         friend class HardwareIndexBufferSharedPtr;
     protected:
@@ -386,9 +383,6 @@ namespace Ogre {
     /** Singleton wrapper for hardware buffer manager. */
     class _OgreExport HardwareBufferManager : public HardwareBufferManagerBase, public Singleton<HardwareBufferManager>
     {
-	public:
-      DECLARE_INIT_CLROBJECT_METHOD_OVERRIDE(HardwareBufferManager);
-    private:
         friend class HardwareVertexBufferSharedPtr;
         friend class HardwareIndexBufferSharedPtr;
     protected:
