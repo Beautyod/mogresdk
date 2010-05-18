@@ -1,194 +1,70 @@
-18:05:55: Creating resource group General
-18:05:55: Creating resource group Internal
-18:05:55: Creating resource group Autodetect
-18:05:55: SceneManagerFactory for type 'DefaultSceneManager' registered.
-18:05:55: Registering ResourceManager for type Material
-18:05:55: Registering ResourceManager for type Mesh
-18:05:55: Registering ResourceManager for type Skeleton
-18:05:55: MovableObjectFactory for type 'ParticleSystem' registered.
-18:05:55: OverlayElementFactory for type Panel registered.
-18:05:55: OverlayElementFactory for type BorderPanel registered.
-18:05:55: OverlayElementFactory for type TextArea registered.
-18:05:55: Registering ResourceManager for type Font
-18:05:55: ArchiveFactory for archive type FileSystem registered.
-18:05:55: ArchiveFactory for archive type Zip registered.
-18:05:55: FreeImage version: 3.10.0
-18:05:55: This program uses FreeImage, a free, open source image library supporting all common bitmap formats. See http://freeimage.sourceforge.net for details
-18:05:55: Supported formats: bmp,ico,jpg,jif,jpeg,jpe,jng,koa,iff,lbm,mng,pbm,pbm,pcd,pcx,pgm,pgm,png,ppm,ppm,ras,tga,targa,tif,tiff,wap,wbmp,wbm,psd,cut,xbm,xpm,gif,hdr,g3,sgi,exr,j2k,j2c,jp2
-18:05:55: DDS codec registering
-18:05:55: Registering ResourceManager for type HighLevelGpuProgram
-18:05:55: Registering ResourceManager for type Compositor
-18:05:55: MovableObjectFactory for type 'Entity' registered.
-18:05:55: MovableObjectFactory for type 'Light' registered.
-18:05:55: MovableObjectFactory for type 'BillboardSet' registered.
-18:05:55: MovableObjectFactory for type 'ManualObject' registered.
-18:05:55: MovableObjectFactory for type 'BillboardChain' registered.
-18:05:55: MovableObjectFactory for type 'RibbonTrail' registered.
-18:05:55: Loading library .\RenderSystem_Direct3D9
-18:05:55: Installing plugin: D3D9 RenderSystem
-18:05:55: D3D9 : Direct3D9 Rendering Subsystem created.
-18:05:55: D3D9: Driver Detection Starts
-18:05:55: D3D9: Driver Detection Ends
-18:05:55: Plugin successfully installed
-18:05:55: Loading library .\RenderSystem_GL
-18:05:55: Installing plugin: GL RenderSystem
-18:05:55: OpenGL Rendering Subsystem created.
-18:05:56: Plugin successfully installed
-18:05:56: Loading library .\Plugin_ParticleFX
-18:05:56: Installing plugin: ParticleFX
-18:05:56: Particle Emitter Type 'Point' registered
-18:05:56: Particle Emitter Type 'Box' registered
-18:05:56: Particle Emitter Type 'Ellipsoid' registered
-18:05:56: Particle Emitter Type 'Cylinder' registered
-18:05:56: Particle Emitter Type 'Ring' registered
-18:05:56: Particle Emitter Type 'HollowEllipsoid' registered
-18:05:56: Particle Affector Type 'LinearForce' registered
-18:05:56: Particle Affector Type 'ColourFader' registered
-18:05:56: Particle Affector Type 'ColourFader2' registered
-18:05:56: Particle Affector Type 'ColourImage' registered
-18:05:56: Particle Affector Type 'ColourInterpolator' registered
-18:05:56: Particle Affector Type 'Scaler' registered
-18:05:56: Particle Affector Type 'Rotator' registered
-18:05:56: Particle Affector Type 'DirectionRandomiser' registered
-18:05:56: Particle Affector Type 'DeflectorPlane' registered
-18:05:56: Plugin successfully installed
-18:05:56: Loading library .\Plugin_BSPSceneManager
-18:05:56: Installing plugin: BSP Scene Manager
-18:05:56: Plugin successfully installed
-18:05:56: Loading library .\Plugin_OctreeSceneManager
-18:05:56: Installing plugin: Octree & Terrain Scene Manager
-18:05:56: Plugin successfully installed
-18:05:56: Loading library .\Plugin_CgProgramManager
-18:05:56: Installing plugin: Cg Program Manager
-18:05:56: Plugin successfully installed
-18:05:56: *-*-* OGRE Initialising
-18:05:56: *-*-* Version 1.4.8 (Eihort)
-18:05:56: Added resource location '../Media' of type 'FileSystem' to resource group 'General'
-18:05:56: D3D9 : RenderSystem Option: Full Screen = No
-18:05:56: D3D9 : RenderSystem Option: Video Mode = 800 x 600 @ 32-bit colour
-18:05:56: CPU Identifier & Features
-18:05:56: -------------------------
-18:05:56:  *   CPU ID: GenuineIntel: Intel(R) Pentium(R) 4 CPU 2.66GHz
-18:05:56:  *      SSE: yes
-18:05:56:  *     SSE2: yes
-18:05:56:  *     SSE3: no
-18:05:56:  *      MMX: yes
-18:05:56:  *   MMXEXT: yes
-18:05:56:  *    3DNOW: no
-18:05:56:  * 3DNOWEXT: no
-18:05:56:  *     CMOV: yes
-18:05:56:  *      TSC: yes
-18:05:56:  *      FPU: yes
-18:05:56:  *      PRO: no
-18:05:56:  *       HT: yes
-18:05:56: -------------------------
-18:05:56: D3D9 : Subsystem Initialising
-18:05:56: ***************************************
-18:05:56: *** D3D9 : Subsystem Initialised OK ***
-18:05:56: ***************************************
-18:05:56: D3D9RenderSystem::createRenderWindow "Main RenderWindow", 800x600 windowed  miscParams: externalWindowHandle=4588858 
-18:05:56: D3D9 : Created D3D9 Rendering Window 'Main RenderWindow' : 792x566, 32bpp
-18:05:56: D3D9 : WARNING - disabling VSync in windowed mode can cause timing issues at lower frame rates, turn VSync on if you observe this problem.
-18:05:56: Registering ResourceManager for type Texture
-18:05:56: Registering ResourceManager for type GpuProgram
-18:05:56: RenderSystem capabilities
-18:05:56: -------------------------
-18:05:56:  * Hardware generation of mipmaps: yes
-18:05:56:  * Texture blending: yes
-18:05:56:  * Anisotropic texture filtering: yes
-18:05:56:  * Dot product texture operation: yes
-18:05:56:  * Cube mapping: yes
-18:05:56:  * Hardware stencil buffer: yes
-18:05:56:    - Stencil depth: 8
-18:05:56:    - Two sided stencil support: yes
-18:05:56:    - Wrap stencil values: yes
-18:05:56:  * Hardware vertex / index buffers: yes
-18:05:56:  * Vertex programs: yes
-18:05:56:    - Max vertex program version: vs_2_a
-18:05:56:  * Fragment programs: yes
-18:05:56:    - Max fragment program version: ps_2_a
-18:05:56:  * Texture Compression: yes
-18:05:56:    - DXT: yes
-18:05:56:    - VTC: no
-18:05:56:  * Scissor Rectangle: yes
-18:05:56:  * Hardware Occlusion Query: yes
-18:05:56:  * User clip planes: yes
-18:05:56:  * VET_UBYTE4 vertex element type: yes
-18:05:56:  * Infinite far plane projection: yes
-18:05:56:  * Hardware render-to-texture: yes
-18:05:56:  * Floating point textures: yes
-18:05:56:  * Non-power-of-two textures: yes (limited)
-18:05:56:  * Volume textures: yes
-18:05:56:  * Multiple Render Targets: 1
-18:05:56:  * Point Sprites: yes
-18:05:56:  * Extended point parameters: yes
-18:05:56:  * Max Point Size: 8192
-18:05:56:  * Vertex texture fetch: no
-18:05:56: ResourceBackgroundQueue - threading disabled
-18:05:56: Particle Renderer Type 'billboard' registered
-18:05:56: SceneManagerFactory for type 'BspSceneManager' registered.
-18:05:56: Registering ResourceManager for type BspLevel
-18:05:56: SceneManagerFactory for type 'OctreeSceneManager' registered.
-18:05:56: SceneManagerFactory for type 'TerrainSceneManager' registered.
-18:05:56: Parsing scripts for resource group Autodetect
-18:05:56: Finished parsing scripts for resource group Autodetect
-18:05:56: Parsing scripts for resource group General
-18:05:56: Parsing script Example.material
-18:05:56: Error in material Examples/MorningSkyBox at line 211 of Example.material: Invalid vertex_program_ref entry - vertex program Ogre/BasicVertexPrograms/AmbientOneTexture has not been defined.
-18:05:56: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource hdr.cg in resource group General or any other group. in ResourceGroupManager::openResource at ..\src\OgreResourceGroupManager.cpp (line 604)
-18:05:56: High-level program Examples/MorningSkyBoxHDRfp encountered an error during loading and is thus not supported.
-OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource hdr.cg in resource group General or any other group. in ResourceGroupManager::openResource at ..\src\OgreResourceGroupManager.cpp (line 604)
-18:05:56: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource hdr.cg in resource group General or any other group. in ResourceGroupManager::openResource at ..\src\OgreResourceGroupManager.cpp (line 604)
-18:05:56: High-level program Examples/MorningCubeMapHDRfp encountered an error during loading and is thus not supported.
-OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource hdr.cg in resource group General or any other group. in ResourceGroupManager::openResource at ..\src\OgreResourceGroupManager.cpp (line 604)
-18:05:56: Error in material Examples/Robot at line 697 of Example.material: Invalid vertex_program_ref entry - vertex program Ogre/HardwareSkinningOneWeight has not been defined.
-18:05:56: Error in material Examples/Robot at line 709 of Example.material: Invalid shadow_caster_vertex_program_ref entry - vertex program Ogre/HardwareSkinningOneWeightShadowCaster has not been defined.
-18:05:56: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource Grass.cg in resource group General or any other group. in ResourceGroupManager::openResource at ..\src\OgreResourceGroupManager.cpp (line 604)
-18:05:56: High-level program Examples/GrassWaverVp encountered an error during loading and is thus not supported.
-OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource Grass.cg in resource group General or any other group. in ResourceGroupManager::openResource at ..\src\OgreResourceGroupManager.cpp (line 604)
-18:05:56: Error in material Examples/HardwareMorphAnimation at line 844 of Example.material: Invalid vertex_program_ref entry - vertex program Ogre/HardwareMorphAnimation has not been defined.
-18:05:56: Error in material Examples/HardwarePoseAnimation at line 879 of Example.material: Invalid vertex_program_ref entry - vertex program Ogre/HardwarePoseAnimation has not been defined.
-18:05:56: Error in material jaiqua at line 987 of Example.material: Invalid vertex_program_ref entry - vertex program Ogre/HardwareSkinningTwoWeights has not been defined.
-18:05:56: Error in material jaiqua at line 992 of Example.material: Invalid shadow_caster_vertex_program_ref entry - vertex program Ogre/HardwareSkinningTwoWeightsShadowCaster has not been defined.
-18:05:56: Finished parsing scripts for resource group General
-18:05:56: Parsing scripts for resource group Internal
-18:05:56: Finished parsing scripts for resource group Internal
-18:05:56: Creating viewport on target 'Main RenderWindow', rendering from camera 'Camera', relative dimensions L: 0.00 T: 0.00 W: 1.00 H: 1.00 ZOrder: 0
-18:05:56: Mesh: Loading ninja.mesh.
-18:05:56: Skeleton: Loading ninja.skeleton
-18:05:56: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource ninja.skeleton in resource group General or any other group. in ResourceGroupManager::openResource at ..\src\OgreResourceGroupManager.cpp (line 604)
-18:05:56: Unable to load skeleton ninja.skeleton for Mesh ninja.mesh. This Mesh will not be animated. You can ignore this message if you are using an offline tool.
-18:05:56: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource nskingr.jpg in resource group General or any other group. in ResourceGroupManager::openResource at ..\src\OgreResourceGroupManager.cpp (line 604)
-18:05:56: Error loading texture nskingr.jpg. Texture layer will be blank. Loading the texture failed with the following exception: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource nskingr.jpg in resource group General or any other group. in ResourceGroupManager::openResource at ..\src\OgreResourceGroupManager.cpp (line 604)
-18:05:59: Unregistering ResourceManager for type BspLevel
-18:05:59: *-*-* OGRE Shutdown
-18:05:59: Unregistering ResourceManager for type Compositor
-18:05:59: Unregistering ResourceManager for type Font
-18:05:59: Unregistering ResourceManager for type Skeleton
-18:05:59: Unregistering ResourceManager for type Mesh
-18:05:59: Unregistering ResourceManager for type HighLevelGpuProgram
-18:05:59: Uninstalling plugin: Cg Program Manager
-18:05:59: Plugin successfully uninstalled
-18:05:59: Unloading library .\Plugin_CgProgramManager
-18:05:59: Uninstalling plugin: Octree & Terrain Scene Manager
-18:05:59: Plugin successfully uninstalled
-18:05:59: Unloading library .\Plugin_OctreeSceneManager
-18:05:59: Uninstalling plugin: BSP Scene Manager
-18:05:59: Plugin successfully uninstalled
-18:05:59: Unloading library .\Plugin_BSPSceneManager
-18:05:59: Uninstalling plugin: ParticleFX
-18:05:59: Plugin successfully uninstalled
-18:05:59: Unloading library .\Plugin_ParticleFX
-18:05:59: Uninstalling plugin: GL RenderSystem
-18:05:59: *** Stopping Win32GL Subsystem ***
-18:05:59: Plugin successfully uninstalled
-18:05:59: Unloading library .\RenderSystem_GL
-18:06:00: Uninstalling plugin: D3D9 RenderSystem
-18:06:00: Render Target 'Main RenderWindow' Average FPS: 1082.42 Best FPS: 1212.79 Worst FPS: 952.048
-18:06:00: D3D9 : Shutting down cleanly.
-18:06:00: Unregistering ResourceManager for type Texture
-18:06:00: Unregistering ResourceManager for type GpuProgram
-18:06:00: D3D9 : Direct3D9 Rendering Subsystem destroyed.
-18:06:00: Plugin successfully uninstalled
-18:06:00: Unloading library .\RenderSystem_Direct3D9
-18:06:00: Unregistering ResourceManager for type Material
+19:39:06: Creating resource group General
+19:39:06: Creating resource group Internal
+19:39:06: Creating resource group Autodetect
+19:39:06: SceneManagerFactory for type 'DefaultSceneManager' registered.
+19:39:06: Registering ResourceManager for type Material
+19:39:06: Registering ResourceManager for type Mesh
+19:39:06: Registering ResourceManager for type Skeleton
+19:39:06: MovableObjectFactory for type 'ParticleSystem' registered.
+19:39:06: OverlayElementFactory for type Panel registered.
+19:39:06: OverlayElementFactory for type BorderPanel registered.
+19:39:06: OverlayElementFactory for type TextArea registered.
+19:39:06: Registering ResourceManager for type Font
+19:39:06: ArchiveFactory for archive type FileSystem registered.
+19:39:06: ArchiveFactory for archive type Zip registered.
+19:39:06: DDS codec registering
+19:39:06: FreeImage version: 3.13.1
+19:39:06: This program uses FreeImage, a free, open source image library supporting all common bitmap formats. See http://freeimage.sourceforge.net for details
+19:39:06: Supported formats: bmp,ico,jpg,jif,jpeg,jpe,jng,koa,iff,lbm,mng,pbm,pbm,pcd,pcx,pgm,pgm,png,ppm,ppm,ras,tga,targa,tif,tiff,wap,wbmp,wbm,psd,cut,xbm,xpm,gif,hdr,g3,sgi,exr,j2k,j2c,jp2,pfm,pct,pict,pic,bay,bmq,cr2,crw,cs1,dc2,dcr,dng,erf,fff,hdr,k25,kdc,mdc,mos,mrw,nef,orf,pef,pxn,raf,raw,rdc,sr2,srf,arw,3fr,cine,ia,kc2,mef,nrw,qtk,rw2,sti,drf,dsc,ptx,cap,iiq,rwz
+19:39:06: PVRTC codec registering
+19:39:06: Registering ResourceManager for type HighLevelGpuProgram
+19:39:06: Registering ResourceManager for type Compositor
+19:39:06: MovableObjectFactory for type 'Entity' registered.
+19:39:06: MovableObjectFactory for type 'Light' registered.
+19:39:06: MovableObjectFactory for type 'BillboardSet' registered.
+19:39:06: MovableObjectFactory for type 'ManualObject' registered.
+19:39:06: MovableObjectFactory for type 'BillboardChain' registered.
+19:39:06: MovableObjectFactory for type 'RibbonTrail' registered.
+19:39:06: Loading library .\RenderSystem_Direct3D9
+19:39:06: Installing plugin: D3D9 RenderSystem
+19:39:06: D3D9 : Direct3D9 Rendering Subsystem created.
+19:39:06: D3D9: Driver Detection Starts
+19:39:06: D3D9: Driver Detection Ends
+19:39:06: Plugin successfully installed
+19:39:06: Loading library .\RenderSystem_GL
+19:39:06: Installing plugin: GL RenderSystem
+19:39:06: OpenGL Rendering Subsystem created.
+19:39:06: Plugin successfully installed
+19:39:06: Loading library .\Plugin_ParticleFX
+19:39:06: Installing plugin: ParticleFX
+19:39:06: Particle Emitter Type 'Point' registered
+19:39:06: Particle Emitter Type 'Box' registered
+19:39:06: Particle Emitter Type 'Ellipsoid' registered
+19:39:06: Particle Emitter Type 'Cylinder' registered
+19:39:06: Particle Emitter Type 'Ring' registered
+19:39:06: Particle Emitter Type 'HollowEllipsoid' registered
+19:39:06: Particle Affector Type 'LinearForce' registered
+19:39:06: Particle Affector Type 'ColourFader' registered
+19:39:06: Particle Affector Type 'ColourFader2' registered
+19:39:06: Particle Affector Type 'ColourImage' registered
+19:39:06: Particle Affector Type 'ColourInterpolator' registered
+19:39:06: Particle Affector Type 'Scaler' registered
+19:39:06: Particle Affector Type 'Rotator' registered
+19:39:06: Particle Affector Type 'DirectionRandomiser' registered
+19:39:06: Particle Affector Type 'DeflectorPlane' registered
+19:39:06: Plugin successfully installed
+19:39:06: Loading library .\Plugin_BSPSceneManager
+19:39:06: Installing plugin: BSP Scene Manager
+19:39:06: Plugin successfully installed
+19:39:06: Loading library .\Plugin_OctreeSceneManager
+19:39:06: Installing plugin: Octree & Terrain Scene Manager
+19:39:06: Plugin successfully installed
+19:39:06: Loading library .\Plugin_CgProgramManager
+19:39:06: Installing plugin: Cg Program Manager
+19:39:06: Plugin successfully installed
+19:39:06: *-*-* OGRE Initialising
+19:39:06: *-*-* Version 1.7.1 (Cthugha)
+19:39:06: Added resource location '../Media' of type 'FileSystem' to resource group 'General'
+19:39:06: D3D9 : RenderSystem Option: Allow NVPerfHUD = No
+19:39:06: D3D9 : RenderSystem Option: Anti aliasing = None
+19:39:06: OGRE EXCEPTION(2:InvalidParametersException): Option named 'Anti aliasing' does not exist. in D3D9RenderSystem::setConfigOption at ..\..\..\ogre\RenderSystems\Direct3D9\src\OgreD3D9RenderSystem.cpp (line 353)
