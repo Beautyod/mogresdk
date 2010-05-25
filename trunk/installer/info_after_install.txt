@@ -5,8 +5,8 @@ Don't forget to install the needed dependencies if you haven't already done so:
 ..... 32bit Windows: http://tinyurl.com/37hooa
 ..... 64bit Windows: http://tinyurl.com/c5ao47
 
-* DirectX 9.0c (March 2009 or newer)
-..... direct download:   http://tinyurl.com/r4vsh5
+* DirectX 9.0c (August 2009 or newer)
+..... direct download:   http://tinyurl.com/oek8dw
 ..... OR use the web installer:   http://tinyurl.com/yu2rxu
 
 * VC++ 2008 SP1 Redist
