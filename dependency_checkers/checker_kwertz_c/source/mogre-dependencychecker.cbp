@@ -11,12 +11,11 @@
 				<Option working_dir="..\binaries" />
 				<Option object_output="obj\Debug\" />
 				<Option type="0" />
-				<Option compiler="tcc" />
+				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
 				</Compiler>
 				<Linker>
-					<Add option="win32-visualstyles.o" />
 					<Add library="advapi32" />
 					<Add library="shell32" />
 				</Linker>
@@ -26,9 +25,8 @@
 				<Option working_dir="..\binaries" />
 				<Option object_output="obj\Release\" />
 				<Option type="0" />
-				<Option compiler="tcc" />
+				<Option compiler="gcc" />
 				<Linker>
-					<Add option="win32-visualstyles.o" />
 					<Add library="advapi32" />
 					<Add library="shell32" />
 				</Linker>
