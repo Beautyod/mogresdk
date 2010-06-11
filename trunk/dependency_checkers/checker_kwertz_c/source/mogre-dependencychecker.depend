@@ -50,3 +50,25 @@
 	<windows.h>
 	"dependencycheckers.h"
 
+1271265626 source:d:\devel\gamedevel\mogresdk_beta\dependency_checkers\checker_kwertz_c\source\main.c
+	<windows.h>
+	"windowcreator.h"
+
+1271265626 d:\devel\gamedevel\mogresdk_beta\dependency_checkers\checker_kwertz_c\source\windowcreator.h
+
+1271265626 source:d:\devel\gamedevel\mogresdk_beta\dependency_checkers\checker_kwertz_c\source\windowcreator.c
+	<windows.h>
+	<shellapi.h>
+	"windowcreator.h"
+	"dependencycheckers.h"
+	"strings.h"
+
+1271265626 d:\devel\gamedevel\mogresdk_beta\dependency_checkers\checker_kwertz_c\source\dependencycheckers.h
+
+1271265626 d:\devel\gamedevel\mogresdk_beta\dependency_checkers\checker_kwertz_c\source\strings.h
+
+1274795936 source:d:\devel\gamedevel\mogresdk_beta\dependency_checkers\checker_kwertz_c\source\dependencycheckers.c
+	<stdio.h>
+	<windows.h>
+	"dependencycheckers.h"
+

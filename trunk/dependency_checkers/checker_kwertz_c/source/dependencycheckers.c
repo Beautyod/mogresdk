@@ -8,9 +8,13 @@ int FileExists(const char* filename)
     FILE* file;
 
     file = fopen(filename, "r");
-    int exists = !(file == NULL);
 
-    fclose(file);
+    if(file != NULL){
+        fclose(file);
+        return 1;
+    }
+
+    return 0;
 }
 
 int CheckDotNet(int major, int minor, int build)
@@ -59,7 +63,7 @@ int CheckDirectX()
 
     // DirectX 9.0c
     char pathStr[MAX_PATH];
-    wsprintf(pathStr, "%d%d", winDir, "\\system32\\D3DX9_40.dll");
+    wsprintf(pathStr, "%s%s", winDir, "\\system32\\D3DX9_42.dll");
 
     return FileExists(pathStr);
 }
@@ -71,7 +75,12 @@ int CheckMSVCR90()
 
     // Microsoft Visual C++ 2008 Runtime
     char pathStr[MAX_PATH];
-    wsprintf(pathStr, "%d%d", winDir, "\\WinSxS\\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.30729.4148_x-ww_d495ac4e\\msvcr90.dll");
+    char pathStr2[MAX_PATH];
+    wsprintf(pathStr, "%s%s", winDir, "\\WinSxS\\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.30729.4148_x-ww_d495ac4e\\msvcr90.dll");
+    wsprintf(pathStr2, "%s%s", winDir,  "\\WinSxS\\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.30729.4148_none_5090ab56bcba71c2\\msvcr90.dll");
 
-    return FileExists(pathStr);
+    if(FileExists(pathStr))
+        return 1;
+    else
+        return FileExists(pathStr2);
 }
