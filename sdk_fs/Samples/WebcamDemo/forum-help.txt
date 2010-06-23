@@ -1,0 +1,3 @@
+If you need help with this demo,
+please write to this forum thread:
+http://www.ogre3d.org/addonforums/viewtopic.php?f=8&t=12812
