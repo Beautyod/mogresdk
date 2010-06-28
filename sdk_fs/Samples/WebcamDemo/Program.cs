@@ -1,18 +1,12 @@
-﻿namespace DSDemo
+﻿
+using System;
+using DSMogre;
+
+namespace Mogre.Demo.Webcam
 {
-    using System;
-
-    using DSMogre;
-
-    using Mogre;
-
     class Program
     {
-        #region Methods
-
-        #region Private Static Methods
-
-        static void Main()
+        public static void Main(string[] args)
         {
             var devices = Capture.CaptureDeviceNames;
             int deviceNum = 1;
@@ -35,14 +29,10 @@
             }
             else
             {
-                Console.WriteLine("No webcam detected ... play video file instead.");
+                Console.WriteLine("No webcam detected ... playing video file instead.");
             }
 
-            new DSDemoApp(deviceNum);
+            new Webcam(deviceNum);
         }
-
-        #endregion Private Static Methods
-
-        #endregion Methods
     }
 }

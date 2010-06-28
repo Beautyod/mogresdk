@@ -1,16 +1,20 @@
-﻿using System;
+﻿#region Using directives
+
+using System;
 using System.Reflection;
 using System.Runtime.InteropServices;
 
-// General Information about an assembly is controlled through the following
+#endregion
+
+// General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("DSMogre")]
+[assembly: AssemblyTitle("WebcamDemo")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("DSMogre")]
-[assembly: AssemblyCopyright("Copyright 2009")]
+[assembly: AssemblyProduct("WebcamDemo")]
+[assembly: AssemblyCopyright("Copyright 2010")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -22,6 +26,6 @@ using System.Runtime.InteropServices;
 //
 // Major.Minor.Build.Revision
 //
-// You can specify all the values or you can use the default the Revision and
+// You can specify all the values or you can use the default the Revision and 
 // Build Numbers by using the '*' as shown below:
-[assembly: AssemblyVersion("0.4.*")]
+[assembly: AssemblyVersion("1.0.*")]
