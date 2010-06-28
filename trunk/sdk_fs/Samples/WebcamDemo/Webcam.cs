@@ -1,4 +1,4 @@
-namespace DSDemo
+﻿namespace Mogre.Demo.Webcam
 {
     using System;
     using System.Collections.Generic;
@@ -9,7 +9,7 @@ namespace DSDemo
 
     using Mogre;
 
-    public class DSDemoApp
+    public class Webcam
     {
         #region Fields
 
@@ -25,7 +25,7 @@ namespace DSDemo
 
         #region Constructors
 
-        public DSDemoApp(int captureSource)
+        public Webcam(int captureSource)
         {
             this.captureSource = captureSource - 2;
             this.Setup();
@@ -71,7 +71,8 @@ namespace DSDemo
             this.root = new Root();
             this.SetupResources();
 
-            this.root.RestoreConfig();
+            this.root.ShowConfigDialog();
+            
             this.window = this.root.Initialise(true);
 
             // Get the SceneManager, in this case a generic one
@@ -110,7 +111,7 @@ namespace DSDemo
             Capture cap;
             if (this.captureSource == -1)
             {
-                cap = new VideoFileCapture("test.avi")
+                cap = new VideoFileCapture(@"..\..\Media\test.avi")
                 {
                     Looping = true
                 };
