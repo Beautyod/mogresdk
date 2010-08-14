@@ -1,0 +1,5 @@
+
+checker_kwertz_c
+
+is the currently used checker for the MogreSDK installer.
+
