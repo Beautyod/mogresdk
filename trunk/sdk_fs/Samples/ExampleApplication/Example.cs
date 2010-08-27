@@ -384,6 +384,14 @@ namespace Mogre.Demo.ExampleApplication
             get { return false; }
         }
 
+        public virtual bool IsMouseNonExclusive
+        {
+            get
+            {
+                return false;
+            }
+        }
+
         public virtual void CreateInput()
         {
             LogManager.Singleton.LogMessage("*** Initializing OIS ***");
@@ -392,11 +400,28 @@ namespace Mogre.Demo.ExampleApplication
             window.GetCustomAttribute("WINDOW", out windowHnd);
             pl.Insert("WINDOW", windowHnd.ToString());
 
+            if (this.IsMouseNonExclusive)
+            {
+                pl.Insert("w32_mouse", "DISCL_FOREGROUND");
+                pl.Insert("w32_mouse", "DISCL_NONEXCLUSIVE");
+            }
+
             inputManager = MOIS.InputManager.CreateInputSystem(pl);
 
             //Create all devices (We only catch joystick exceptions here, as, most people have Key/Mouse)
             inputKeyboard = (MOIS.Keyboard)inputManager.CreateInputObject(MOIS.Type.OISKeyboard, UseBufferedInput);
             inputMouse = (MOIS.Mouse)inputManager.CreateInputObject(MOIS.Type.OISMouse, UseBufferedInput);
+
+            uint width;
+            uint height;
+            uint depth;
+            int left;
+            int top;
+
+            window.GetMetrics(out width, out height, out depth, out left, out top); 
+            MOIS.MouseState_NativePtr cState = inputMouse.MouseState;
+            cState.width = (int)width;
+            cState.height = (int)height;
         }
 
         public abstract void CreateScene();    // pure virtual - this has to be overridden
