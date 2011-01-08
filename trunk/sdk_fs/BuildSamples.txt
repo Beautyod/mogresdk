@@ -3,9 +3,6 @@
 Some infos for buiding the files:
 ------------------------------------------
 
-BuildSamples.cmd
- --> lets you build the MOGRE samples for any cpu
- 
 BuildSamplesX86.cmd
  --> lets you build the samples explicitly for 32-bit processors, 
      so that WOW64 is activated on Windows 64-bit editions.
