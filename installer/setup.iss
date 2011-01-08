@@ -55,7 +55,7 @@ Source: ..\misc\media\icons\ogre_engraved_bgradient_appicon.ico; DestDir: {app}
 [Icons]
 Name: {group}\Sample browser; Filename: {app}\bin\Release\browser.exe; WorkingDir: {app}\bin\Release
 Name: {group}\Browse SDK folder; Filename: {app}
-Name: {group}\Build samples; Filename: {app}\BuildSamples.cmd; WorkingDir: {app}
+Name: {group}\Build samples; Filename: {app}\BuildSamplesX86.cmd; WorkingDir: {app}
 Name: {group}\Links\MOGRE Wiki; Filename: http://www.ogre3d.org/wiki/index.php/MOGRE
 Name: {group}\Links\Official MOGRE Forum; Filename: http://www.ogre3d.org/phpBB2addons/viewforum.php?f=8
 Name: {group}\Report problems with Mogre SDK; Filename: http://www.ogre3d.org/addonforums/viewtopic.php?f=8&t=11703
