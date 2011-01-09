@@ -77,7 +77,7 @@
             string xmlFile = Path.Combine(Path.GetDirectoryName(assemblyName), Path.GetFileNameWithoutExtension(assemblyName) + ".xml");
 
             Console.WriteLine("Writing xml comment file...");
-            using (XmlTextWriter xtw = new XmlTextWriter(xmlFile, null))
+            using (var xtw = new XmlTextWriter(xmlFile, null))
             {
                 xtw.Formatting = Formatting.Indented;
                 xtw.WriteStartDocument();
@@ -101,7 +101,7 @@
 
             }
 
-            List<String> logList = new List<String>(stringBuilder.ToString().Split(new string[]{"\r", "\n"}, StringSplitOptions.RemoveEmptyEntries));
+            var logList = new List<String>(stringBuilder.ToString().Split(new[]{"\r", "\n"}, StringSplitOptions.RemoveEmptyEntries));
             stringBuilder = new StringBuilder();
             logList.Sort();
             foreach (string line in logList)
@@ -120,7 +120,7 @@
 
         private static void ExportEnum(XmlTextWriter xtw, Type nt, Dictionary<string, List<XmlNode>> memberDict)
         {
-            var nodeList = new List<XmlNode>();
+            List<XmlNode> nodeList;
             string enumSearchValue = nt.Name.ToUpperInvariant();
 
             // special case for OperationTypes
@@ -132,7 +132,7 @@
             if (memberDict.TryGetValue(enumSearchValue, out nodeList))
             {
                 var node = nodeList[0];
-                WriteMemberToXML(xtw, "T:" + nt.ToString(), node);
+                WriteMemberToXML(xtw, "T:" + nt, node);
 
                 // write enum values, assumes Ogre and Mogre use the same name
                 var importEnumNode = node.FirstChild;
@@ -141,7 +141,7 @@
                     if (importEnumNode.Name == "enumvalue")
                     {
                         WriteMemberToXML(xtw,
-                                         "F:" + nt.ToString() + "." + importEnumNode.SelectSingleNode("name").InnerText,
+                                         "F:" + nt + "." + importEnumNode.SelectSingleNode("name").InnerText,
                                          importEnumNode);
                     }
 
@@ -161,7 +161,7 @@
             eventSearchValues[0] = nt.Name + "::" + "Listener";
             eventSearchValues[1] = nt.Name + "Listener";
 
-            string eventName = "E:" + nt.ToString() + "." + ei.Name;
+            string eventName = "E:" + nt + "." + ei.Name;
 
             foreach (string eventSearchValue in eventSearchValues)
             {
@@ -174,7 +174,7 @@
             if (doc != null)
             {
                 var memberDict = GetMemberDict(doc);
-                var nodeList = new List<XmlNode>();
+                List<XmlNode> nodeList;
 
                 if (memberDict.TryGetValue(ei.Name.ToUpperInvariant(), out nodeList))
                 {
@@ -215,7 +215,7 @@
                 {
                     // write type
                     WriteMemberToXML(xtw,
-                                     "T:" + type.ToString(),
+                                     "T:" + type,
                                      doc.SelectSingleNode("doxygen/compounddef"));
 
                     ExportTypeMembers(xtw, type, GetMemberDict(doc));
@@ -225,21 +225,19 @@
                     // export top-level types
                     var memberDict = GetMemberDict(doc);
 
-                    var nodeList = new List<XmlNode>();
-                    XmlNode node = null;
-
                     if (!type.IsEnum)
                     {
+                        List<XmlNode> nodeList;
                         if (memberDict.TryGetValue(typeSearchValue.ToUpperInvariant(), out nodeList))
                         {
-                            node = nodeList[0];
+                            XmlNode node = nodeList[0];
                             WriteMemberToXML(xtw,
-                                             "T:" + type.ToString(),
+                                             "T:" + type,
                                              node);
                         }
                         else
                         {
-                            Log("Type not found: " + type.ToString());
+                            Log("Type not found: " + type);
                         }
                     }
                     else
@@ -256,7 +254,7 @@
             var members = type.GetMembers();
             foreach (MemberInfo member in members)
             {
-                bool skip = false;
+                bool skip;
                 bool findOverload = false;
                 bool addSets = false;
                 string[] memberSearchValues = new string[3];
@@ -270,7 +268,7 @@
                             skip = !ci.IsPublic;
                             findOverload = true;
                             memberSearchValues[0] = type.Name.ToUpperInvariant();
-                            name = "M:" + type.ToString() + ".#ctor" + GetParameterString(ci.GetParameters());
+                            name = "M:" + type + ".#ctor" + GetParameterString(ci.GetParameters());
                         }
                         break;
 
@@ -280,7 +278,7 @@
                             skip = !mi.IsPublic || mi.IsSpecialName;
                             findOverload = true;
                             memberSearchValues[0] = mi.Name.ToUpperInvariant();
-                            name = "M:" + type.ToString() + "." + mi.Name + GetParameterString(mi.GetParameters());
+                            name = "M:" + type + "." + mi.Name + GetParameterString(mi.GetParameters());
                         }
                         break;
 
@@ -291,7 +289,7 @@
                             memberSearchValues[0] = pi.Name.ToUpperInvariant();
                             memberSearchValues[1] = "GET" + pi.Name.ToUpperInvariant();
                             memberSearchValues[2] = "M" + pi.Name.ToUpperInvariant();
-                            name = "P:" + type.ToString() + "." + pi.Name;
+                            name = "P:" + type + "." + pi.Name;
                             addSets = pi.CanWrite;
                         }
                         break;
@@ -301,7 +299,7 @@
                             var fi = (FieldInfo)member;
                             skip = !fi.IsPublic;
                             memberSearchValues[0] = fi.Name.ToUpperInvariant();
-                            name =  "F:" + type.ToString() + "." + fi.Name;
+                            name =  "F:" + type + "." + fi.Name;
                         }
                         break;
 
@@ -327,14 +325,13 @@
 
                     default:
                         skip = true;
-                        Log("Ignored member: " + type.ToString() + "." + member.Name);
+                        Log("Ignored member: " + type + "." + member.Name);
                         break;
                 }
 
                 if (!(skip || IsIgnoredName(member.Name, member.MemberType)))
                 {
                     var nodeList = new List<XmlNode>();
-                    XmlNode node = null;
 
                     foreach (string memberSearchValue in memberSearchValues)
                     {
@@ -351,6 +348,7 @@
 
                     if (nodeList != null)
                     {
+                        XmlNode node;
                         if (!findOverload || nodeList.Count == 1)
                         {
                             node = nodeList[0];
@@ -506,7 +504,7 @@ Example: MogreXml .\Mogre.dll Ogre Mogre");
             val = Regex.Replace(val, @"(?![\s,])\W", string.Empty);
 
             // split parameters
-            var split = val.Split(new char[]{ ',' }, StringSplitOptions.RemoveEmptyEntries);
+            var split = val.Split(new[]{ ',' }, StringSplitOptions.RemoveEmptyEntries);
 
             // get parameter name
             for (int i = 0; i < split.Length; i++)
@@ -528,7 +526,7 @@ Example: MogreXml .\Mogre.dll Ogre Mogre");
                 var nativeParas = SplitNativeParameterNames(node.SelectSingleNode("argsstring").InnerText);
 
                 int matchCount = 0;
-
+                
                 for (int i = 0; i < parameters.Length && i < nativeParas.Length; i++)
                 {
                     if (nativeParas[i].ToUpperInvariant() == parameters[i].Name.ToUpperInvariant())
@@ -561,8 +559,8 @@ Example: MogreXml .\Mogre.dll Ogre Mogre");
                 return false;
             }
 
-            // prefer the detailed description
-            var descNode = description.SelectSingleNode("briefdescription/para") ?? description.SelectSingleNode("detaileddescription/para");;
+            // prefer the brief description
+            var descNode = description.SelectSingleNode("briefdescription/para") ?? description.SelectSingleNode("detaileddescription/para");
 
             if (descNode == null || string.IsNullOrEmpty(descNode.InnerText))
             {
@@ -625,6 +623,7 @@ Example: MogreXml .\Mogre.dll Ogre Mogre");
 
         private static void WriteMemberToXML(XmlTextWriter xtw, string name, XmlNode description)
         {
+            name = name.Replace('+', '.');
             WriteMemberToXML(xtw, null, name, description, false);
         }
 
