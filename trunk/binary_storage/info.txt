@@ -1,0 +1,8 @@
+This directory is not needed for the Mogre SDK.
+It's just a storage for downloadable files.
+
+Please don't remove them if there is no need. 
+(To keep them online for a longer time. Maybe somebody will need it.)
+
+Please don't rename this directory. 
+(If you do so, then all links to here will be dead.)
