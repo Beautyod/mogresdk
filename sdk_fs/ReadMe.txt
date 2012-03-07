@@ -25,28 +25,40 @@ http://www.ogre3d.org/wiki/index.php/MOGRE
 -------------------------------------
 How to compile MOGRE
 -------------------------------------
-Visit http://www.ogre3d.org/wiki/index.php/Building_MOGRE_1.6_from_source
+The most easy way is our "MogreBuilder" tool:
+https://bitbucket.org/mogre/mogrebuilder
+
+Instructions step by step:
+http://www.ogre3d.org/tikiwiki/Building+MOGRE+from+source
 
 
 -------------------------------------
 What's the Ogre version
 -------------------------------------
-It's the 1.6.4 (Shoggoth) release.
+It's the 1.7.x (Cthugha) release.
 
 
 -------------------------------------
 What's the license
 -------------------------------------
-LGPL (see License.html)
+MIT (see license_MIT.txt)
 
 
 -------------------------------------
 Who is responsible
 -------------------------------------
-Copyright (c) 2006-2007 Argiris Kirtzidis (Bekas)
-Maintainer (2008): Mario Serrano Leones (Marioko)
-Maintainer (2009): GantZ
-Installer/SDK development (2009): kwertz
+Well, there is no specific maintainer. 
+There always active people.
+
+Just visit our Mogre forum:
+http://www.ogre3d.org/addonforums/viewforum.php?f=8
+
+Before you ask questions, please use the forum search 
+and look to our Mogre main page in the wiki:
+http://www.ogre3d.org/tikiwiki/MOGRE
+
+Special thanks to the father of Mogre:
+Argiris Kirtzidis (Bekas) - He created the Mogre autowrapper in 2006-2007
 
 
 -------------------------------------
@@ -62,3 +74,7 @@ Thanks a lot guys!
 
 --Ogre team
 They provided the amazing Object-oriented Graphics Rendering Engine (OGRE).
+
+--Mogre community
+It's only a small sub-community of Ogre, but continues the Mogre development and gives support. 
+Thanks to all Mogre members (-:
