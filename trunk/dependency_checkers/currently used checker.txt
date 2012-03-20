@@ -3,3 +3,17 @@ checker_kwertz_c
 
 is the currently used checker for the MogreSDK installer.
 
+
+Note:
+
+For some depencies it's difficult to check if they are still installed 
+in the correct version. Sometimes the check results were wrong. 
+So perhaps we should remove some or all checkers from the installer script. 
+Instead we could ask the user if he agree to download and install the 
+needed external installers.
+
+Details were postet somewhere in the long SDK development forum topic:
+http://www.ogre3d.org/addonforums/viewtopic.php?f=8&t=11703
+
+There is also a wiki page which contains information about the SDK:
+http://www.ogre3d.org/tikiwiki/Mogre+SDK+development
